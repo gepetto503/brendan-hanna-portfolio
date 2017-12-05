@@ -1,5 +1,5 @@
-.foo {
-  h1 {
-    font-size: 100px;
-  }
-}
+@import
+  "normalize",
+  "vars",
+  "my-styles",
+  "materialize-form-colors";

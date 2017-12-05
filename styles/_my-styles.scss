@@ -1,0 +1,121 @@
+//box-sizing
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+  }
+//
+
+body {
+  font-size: 16px;
+}
+
+header {
+  #top-logo {
+    display: block;
+    margin: auto;
+    margin-bottom: -35px;
+  }
+  p {
+    text-align: center;
+    font-family: "Roboto Condensed", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+}
+
+//basic section styles
+section {
+  padding: 30px;
+  h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-family: "roboto condensed", sans-serif;
+    font-style: italic;
+    color: $grey;
+  }
+  p {
+    line-height: 1.5em;
+    font-weight: 700;
+  }
+}
+
+//some sections have light backgrounds
+.light-bg {
+  background-color: $light-bg;
+}
+
+.horizontal-line {
+  border-top: 2px solid $light-grey;
+  margin: 20px auto;
+}
+
+.horizontal-line-dark {
+  border-top: 1px solid $light-grey;
+  margin: 20px auto;
+}
+
+footer {
+  padding: 30px;
+  a {
+    display: block;
+    font-family: "roboto condensed" sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: $dark-grey;
+  }
+}
+
+
+//thumbnails of each project on the landing page
+.project-thumb {
+  height: 220px;
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+//bg images for each individual project
+#style360 {
+  background-image: url('../images/style360.png');
+}
+
+#pokemon {
+  background-image: url('../images/pokemon.png');
+}
+
+#ebird
+ {
+  background-image: url('../images/ebird.png');
+}
+
+#sandwich {
+  background-image: url('../images/sandwich.png');
+}
+
+#about {
+  img {
+    display: block;
+    margin: 30px auto;
+  }
+}
+
+#contact {
+  .button {
+    display: block;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-family: "roboto condensed", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+}
