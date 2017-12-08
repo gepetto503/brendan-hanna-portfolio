@@ -19,32 +19,28 @@
     <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body>
-    <!-- materialize navbar -->
-    <nav>
-      <div class="nav-wrapper white">
+    <!-- my navbar -->
+    <div class="my-nav">
+      <div class="nav-top-bar">
         <!-- logo -->
-        <a href="#!" class="brand-logo left">
-          <img src="images/small-box-logo.png" alt="BH logo">
-        </a>
+        <img src="images/small-box-logo.png" alt="BH logo">
         <!-- hamburger menu -->
-        <a href="#" data-activates="mobile-demo" class="button-collapse right">
-          <i class="fa fa-bars material-icons black-text" aria-hidden="true"></i>
-        </a>
+        <i class="fa fa-bars hamburger" aria-hidden="true"></i>
+      </div>
         <!-- un-collapsed navbar links -->
-        <ul class="right hide-on-med-and-down">
-          <li><a href="#work" class="black-text">Work</a></li>
-          <li><a href="#about" class="black-text">About</a></li>
-          <li><a href="#contact" class="black-text">Contact</a></li>
-        </ul>
-        <!-- side nav -->
-        <ul class="side-nav" id="mobile-demo">
+        <ul class="navbar-links hide-on-med-and-down">
           <li><a href="#work">Work</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
-          <li id="hide-nav"><a href="#">Hide Me</a></li>
+        </ul>
+        <!-- dropdown -->
+        <ul class="dropdown-links">
+          <li><a href="#work">Work</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
-    </nav>
+    </div>
 
 
     <!--header-->

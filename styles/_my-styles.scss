@@ -17,24 +17,62 @@ body {
   font-size: 16px;
 }
 
-nav {
-  display: none;
+//whole nav, including dropdown links and links visible in uncollapsed navbar
+.my-nav {
+  //logo and hamburger in one cell, dropdown links in another below them
+  display: flex;
+  flex-direction: column;
+
+  //gives whole nav shadow
+  box-shadow: 5px 0px 2px grey;
+  z-index: 1;
   position: relative;
-  transition: .5s linear;
-  .brand-logo {
-    position: absolute;
-    top: -16px;
+  top: -100;
+  transition: 1s linear;
+  ul {
+    margin: 0;
+  }
+  .nav-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    height: 60px;
+    background-color: white;
+    transition: .4s linear;
+
+    z-index: 1;
+    .hamburger {
+      cursor: pointer;
+    }
+  }
+  .navbar-links {
+  }
+  .dropdown-links {
+    display: none;
+    background-color: white;
+    padding: 20px;
+    padding-top: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    box-shadow: 5px 0px 2px grey;
+    transition: 1s linear;
+    li a {
+      color: black;
+      line-height: 1.75em;
+      font-weight: 400;
+      font-style: italic;
+      border-bottom: 1px solid $light-grey;
+    }
   }
 }
 
 .sticky {
-  display: block;
   position: fixed;
   z-index: 1000;
   top: 0;
-  left: 0;
   right: 0;
-  bottom: 0;
+  left: 0;
 }
 
 header {
