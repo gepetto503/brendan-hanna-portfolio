@@ -1,3 +1,5 @@
+//styles are more or less in the same order as they appear in the markup
+
 //box-sizing
 html {
   -webkit-box-sizing: border-box;
@@ -13,6 +15,26 @@ html {
 
 body {
   font-size: 16px;
+}
+
+nav {
+  display: none;
+  position: relative;
+  transition: .5s linear;
+  .brand-logo {
+    position: absolute;
+    top: -16px;
+  }
+}
+
+.sticky {
+  display: block;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 header {
