@@ -1,0 +1,143 @@
+//hides the case study div off screen to the right of the carousel
+.swapper-wrapper {
+  overflow-x: hidden;
+  position: relative;
+  padding: 0;
+}
+//
+.swapper{
+  display: flex;
+  position: relative;
+  transition: .5s ease-in;
+  right: 0;
+
+}
+
+//make sure one or the takes up the whole screen
+.carousel, .case-studies {
+  min-width: 100vw;
+}
+
+
+//hover/button behavior
+.button-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .view-proj-btn {
+    display: none;
+    // position: absolute;
+    // top: 65%;
+    // left: 50%;
+    // transform: translateX(-50%);
+  }
+  &:hover {
+    .overlay {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,.5);
+    }
+    .view-proj-btn {
+      display: flex;
+    }
+  }
+
+
+}
+
+
+
+.case-studies-visible {
+  right: 100vw;
+}
+
+.case-studies {
+  min-height: 60vh;
+  width: 100vw;
+  padding: 20px;
+  .back-chevron, .back {
+    cursor: pointer;
+  }
+  .case-study {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+//bg properties that apply to all carousel images
+.carousel-item {
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+//bg images for each individual carousel slide
+#style360 {
+  background-image: url('../images/style360.png');
+}
+
+#pokemon {
+  background-image: url('../images/pokemon.png');
+}
+
+#ebird
+ {
+  background-image: url('../images/ebird.png');
+}
+
+#sandwich {
+  background-image: url('../images/sandwich.png');
+}
+
+#npo {
+  background-image: url('../images/npodonator.PNG');
+}
+
+//old work thumbnail section
+
+// #work {
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: 0;
+//   margin-top: 40px;
+// }
+
+
+// .view-button:hover ~ .overlay {
+//   width: 100%;
+//   height: 100%;
+//   background-color: rgba(225,225,225, 0.8);
+//   z-index: 1;
+// }
+
+
+
+// //thumbnails of each project on the landing page
+// .project-thumb {
+//   height: 220px;
+//
+//   background: center center no-repeat;
+//   background-size: cover;
+//
+//   cursor: pointer;
+//
+//   &:hover {
+//
+//   }
+//
+//   //flex
+//   flex-basis: 100%;
+//   @include tablet {
+//     flex-basis: 50%;
+//   }
+//   @include desktop {
+//     height: 320px;
+//     flex-basis: 25%;
+//   }
+// }

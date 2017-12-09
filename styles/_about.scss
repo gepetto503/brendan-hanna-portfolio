@@ -1,8 +1,13 @@
 .about-content {
   @include lg-phone {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: flex-start;
+    max-width: $tablet-width;
+    margin: auto;
+  };
+  @include desktop {
+    max-width: $desktop-width;
   };
   img {
     display: block;

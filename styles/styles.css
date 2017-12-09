@@ -541,11 +541,81 @@ footer {
           margin-left: 15px;
           text-transform: uppercase; } }
 
+.swapper-wrapper {
+  overflow-x: hidden;
+  position: relative;
+  padding: 0; }
+
+.swapper {
+  display: flex;
+  position: relative;
+  transition: .5s ease-in;
+  right: 0; }
+
+.carousel, .case-studies {
+  min-width: 100vw; }
+
+.button-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .button-wrapper .view-proj-btn {
+    display: none; }
+  .button-wrapper:hover .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .button-wrapper:hover .view-proj-btn {
+    display: flex; }
+
+.case-studies-visible {
+  right: 100vw; }
+
+.case-studies {
+  min-height: 60vh;
+  width: 100vw;
+  padding: 20px; }
+  .case-studies .back-chevron, .case-studies .back {
+    cursor: pointer; }
+  .case-studies .case-study {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.carousel-item {
+  background: center center no-repeat;
+  background-size: cover; }
+
+#style360 {
+  background-image: url("../images/style360.png"); }
+
+#pokemon {
+  background-image: url("../images/pokemon.png"); }
+
+#ebird {
+  background-image: url("../images/ebird.png"); }
+
+#sandwich {
+  background-image: url("../images/sandwich.png"); }
+
+#npo {
+  background-image: url("../images/npodonator.PNG"); }
+
 @media (min-width: 600px) {
   .about-content {
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start; } }
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 768px;
+    margin: auto; } }
+@media (min-width: 1024px) {
+  .about-content {
+    max-width: 1024px; } }
 .about-content img {
   display: block;
   margin: 30px auto; }
@@ -569,19 +639,36 @@ footer {
   transition: .5s ease-in;
   right: 0; }
 
-.carousel, .case-study {
+.carousel, .case-studies {
   min-width: 100vw; }
 
-.case-study-visible {
+.button-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; }
+  .button-wrapper .view-proj-btn {
+    display: none; }
+  .button-wrapper:hover .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); }
+  .button-wrapper:hover .view-proj-btn {
+    display: flex; }
+
+.case-studies-visible {
   right: 100vw; }
 
-.case-study {
+.case-studies {
   min-height: 60vh;
   width: 100vw;
   padding: 20px; }
-  .case-study .back-chevron, .case-study .back {
+  .case-studies .back-chevron, .case-studies .back {
     cursor: pointer; }
-  .case-study .case-study-content {
+  .case-studies .case-study {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -589,8 +676,7 @@ footer {
 
 .carousel-item {
   background: center center no-repeat;
-  background-size: cover;
-  cursor: default; }
+  background-size: cover; }
 
 #style360 {
   background-image: url("../images/style360.png"); }
@@ -603,5 +689,8 @@ footer {
 
 #sandwich {
   background-image: url("../images/sandwich.png"); }
+
+#npo {
+  background-image: url("../images/npodonator.PNG"); }
 
 /*# sourceMappingURL=styles.css.map */
