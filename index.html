@@ -21,64 +21,97 @@
   <body>
     <!-- my navbar -->
     <div class="my-nav">
+      <!--top bar-->
       <div class="nav-top-bar">
-        <!-- logo -->
-        <img src="images/small-box-logo.png" alt="BH logo">
-        <!-- hamburger menu -->
+        <a href="#top" id="nav-logo">
+          <img src="images/small-box-logo.png" alt="BH logo">
+        </a>
         <i class="fa fa-bars hamburger" aria-hidden="true"></i>
-      </div>
         <!-- un-collapsed navbar links -->
-        <ul class="navbar-links hide-on-med-and-down">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-        <!-- dropdown -->
-        <ul class="dropdown-links">
+        <ul class="navbar-links">
           <li><a href="#work">Work</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
+      <!-- dropdown -->
+      <ul class="dropdown-links">
+        <li><a href="#work">Work</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
 
 
     <!--header-->
-    <header>
-      <img src="images/bar-logo.png" alt="brendan hanna logo" id="top-logo">
-      <p>Front-End Developer, UI & Graphic Designer</p>
+    <header id="top">
+        <h1>Brendan Hanna</h1>
+        <p>Front-End Developer, UI & Graphic Designer</p>
     </header>
 
-    <!-- work thumbnails -->
+    <!--holds carousel and case studies-->
+    <section id="work" class="swapper-wrapper">
+      <div class="swapper">
+        <!--carousel-->
+        <div class="carousel carousel-slider" data-indicators="true">
+          <div class="carousel-fixed-item center">
+            <a class="btn waves-effect white grey-text darken-text-2 view-button">VIEW</a>
+          </div>
+          <a class="carousel-item" href="#one!" id="style360"></a>
+          <a class="carousel-item" href="#two!" id="pokemon">=</a>
+          <a class="carousel-item" href="#three!" id="ebird"></a>
+          <a class="carousel-item" href="#four!" id="sandwich"></a>
+        </div>
+        <!--end carousel-->
+        <!--case study (initially hidden off screen) -->
+        <div class="case-study">
+          <i class="fa fa-chevron-left back-chevron"></i>
+          <div class="case-study-content">
+            <h2>Look, it's a Case Study</h2>
+            <h3 class="back">BACK</h3>
+          </div>
+        </div>
+        <!-- end case study-->
+      </div>
+      <!-- end swapper wrapper-->
+    </section>
+
+    <!-- old work thumbnail grid
     <section id="work">
       <section class="project-thumb" id="style360"></section>
       <section class="project-thumb" id="pokemon"></section>
       <section class="project-thumb" id="ebird"></section>
       <section class="project-thumb" id="sandwich"></section>
+    </section>-->
 
-    </section>
 
     <!--about section-->
     <section id="about">
       <h3>About</h3>
       <div class="horizontal-line"></div>
-      <img src="images/about-photo.png" alt="portrait of brendan hanna">
-      <p>I'm a UI designer and front-end dev passionate about combining tech with design, music and social change. Fluent in HTML, CSS and Javascript using tools like Angular, React, Sass/Less, Sketch, Invision, Photoshop & Illustrator.</p>
-      <p>I am also a hip hop artist under the name Gepetto. Check my music out here.</p>
+      <div class="about-content">
+        <img src="images/about-photo.png" alt="portrait of brendan hanna">
+        <div class="about-text">
+          <p>I'm a UI designer and front-end dev passionate about combining tech with design, music and social change. Fluent in HTML, CSS and Javascript using tools like Angular, React, Sass/Less, Sketch, Invision, Photoshop & Illustrator.</p>
+          <p>I am also a hip hop artist under the name Gepetto.  As a rapper and producer, I've been active in Portland for ten years and put out three studio projects and a bunch of mixtapes and production features. Check my music out <a href="http://gepettomusic.com" target="_blank">here.</a></p>
+        </div>
+      </div>
     </section>
 
     <!-- contact section -->
     <section class="light-bg" id="contact">
-      <h3>Contact</h3>
-      <div class="input-field">
-        <input id="email" type="email" class="validate">
-        <label for="email">Email</label>
-      </div>
-      <div class="input-field">
-        <textarea id="message" class="materialize-textarea"></textarea>
-        <label for="message">Leave a Mess</label>
-      </div>
-      <a class="waves-effect waves-light btn-large button">Holler</a>
+      <form>        
+        <h3>Contact</h3>
+        <div class="input-field">
+          <input id="email" type="email" class="validate">
+          <label for="email">Email</label>
+        </div>
+        <div class="input-field">
+          <textarea id="message" class="materialize-textarea"></textarea>
+          <label for="message">Leave a Mess</label>
+        </div>
+        <a class="waves-effect waves-light btn-large button">Holler</a>
+      </form>
     </section>
 
     <!-- footer-->

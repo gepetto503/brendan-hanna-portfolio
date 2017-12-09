@@ -1,27 +1,42 @@
 $( document ).ready(function() {
-    $(window).scroll(function(){
-    	if($(window).scrollTop() >= 300) {
-        $('.my-nav').show();
-    		$('.my-nav').addClass('sticky');
-    	} else {
-        $('.my-nav').hide();
-    		$('.my-nav').removeClass('sticky');
-    	}
+  //make room for navbar
+  $('body').offset({top:100, left: 0});
 
-    });
+  $('html').click(function() {
+    $('.dropdown-links').hide();
+  });
 
-    $('.hamburger').click(function(event){
-      $('.dropdown-links').toggle();
-    });
+  $('.my-nav').click(function(event){
+    event.stopPropagation();
+  });
 
-    $('.my-nav a').click(function(event) {
-    	var id = $(this).attr("href");
-    	// var offset = 300;
-    	var target = $(id).offset().top - 50;
-    	$('html, body').animate({
-    		scrollTop: target
-      });
-      $('.dropdown-links').hide();
+  $('.hamburger').click(function(event){
+    $('.dropdown-links').toggle();
+  });
+
+  $('.my-nav a, #nav-logo').click(function(event) {
+    var id = $(this).attr("href");
+    var offset = 60;
+    var target = $(id).offset().top - 60;
+
+    $('html, body').animate({
+      scrollTop: target
     });
+    $('.dropdown-links').hide();
+  });
+
+  //initialize materialize carousel
+ $('.carousel.carousel-slider').carousel({fullWidth: true});
+
+ //when you click 'view' on carousel, bring in case study
+ $('.view-button').click(function(event){
+   $('.swapper').addClass('case-study-visible');
+   $('#about, #contact').toggle([400]);
+ });
+ //when you click the back arrow on case study, bring back carousel
+ $('.back-chevron, .back').click(function(event){
+   $('.swapper').removeClass('case-study-visible');
+   $('#about, #contact').toggle([400]);
+  });
 
 });
