@@ -29,6 +29,9 @@ $( document ).ready(function() {
   //initialize materialize carousel
  $('.carousel.carousel-slider').carousel({fullWidth: true});
 
+ //on page load, individual case studies are hidden until their corresponding view button is clicked
+ $('.case-study').hide();
+
  //when you click a button on carousel, bring in case study
  $('.view-proj-btn').click(function(event){
    //slide in case studies div from the right

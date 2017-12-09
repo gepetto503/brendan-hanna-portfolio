@@ -34,6 +34,10 @@
     // left: 50%;
     // transform: translateX(-50%);
   }
+  .overlay {
+    background-color: rgba(0,0,0,0);
+    transition: .2s linear;
+  }
   &:hover {
     .overlay {
       position: absolute;

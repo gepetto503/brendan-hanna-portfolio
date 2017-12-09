@@ -564,6 +564,9 @@ footer {
   position: relative; }
   .button-wrapper .view-proj-btn {
     display: none; }
+  .button-wrapper .overlay {
+    background-color: rgba(0, 0, 0, 0);
+    transition: .2s linear; }
   .button-wrapper:hover .overlay {
     position: absolute;
     height: 100%;
@@ -651,6 +654,9 @@ footer {
   position: relative; }
   .button-wrapper .view-proj-btn {
     display: none; }
+  .button-wrapper .overlay {
+    background-color: rgba(0, 0, 0, 0);
+    transition: .2s linear; }
   .button-wrapper:hover .overlay {
     position: absolute;
     height: 100%;
