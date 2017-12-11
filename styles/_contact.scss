@@ -1,0 +1,16 @@
+#contact {
+  form {
+    max-width: $tablet-width;
+    margin: auto;
+  }
+  .button {
+    display: block;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-family: "roboto condensed", sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.5em;
+  }
+}

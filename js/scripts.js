@@ -1,4 +1,15 @@
 $( document ).ready(function() {
+  window.USER_IS_TOUCHING = null;
+
+  //when user touches screen...
+  window.addEventListener('touchstart', function onFirstTouch() {
+    // or set some global variable
+    window.USER_IS_TOUCHING = true;
+    console.log('touch recognized');
+
+    // we only need to know once that a human touched the screen, so we can stop listening now
+    window.removeEventListener('touchstart', onFirstTouch, false);
+  }, false);
 
   //make room for navbar
   $('body').offset({top:100, left: 0});
@@ -28,12 +39,36 @@ $( document ).ready(function() {
 
   //initialize materialize carousel
  $('.carousel.carousel-slider').carousel({fullWidth: true});
- //make my previous and next arrows on carousel Work
+
+ //make my previous and next chevrons on carousel Work
  $('.carousel-prev').click(function(event){
    $('.carousel').carousel('prev');
  });
  $('.carousel-next').click(function(event){
    $('.carousel').carousel('next');
  });
+
+ //'top' arrow at bottom of case studies on desktop
+  $('.to-top-desktop').click(function(event){
+   $('.case-study-content').animate({
+     scrollTop: 0
+   }, 1000);
+ });
+
+ //'top' arrow at bottom of case studies on mobile/tablet
+  $('.to-top-tablet-and-down').click(function(event){
+    // alert('boo');
+   $('html, body').animate({
+     scrollTop: 0
+   }, 1000);
+ });
+
+ $('.case-study-content').scroll(function() {
+   if($('.case-study-content').scrollTop()>= 100){
+     $('.scroll-downs').animate({opacity: 0});
+   }
+ });
+
+
 
 });

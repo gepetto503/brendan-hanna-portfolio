@@ -64,33 +64,3 @@ section {
   border-top: 1px solid $light-grey;
   margin: 20px auto;
 }
-
-#contact {
-  form {
-    max-width: $tablet-width;
-    margin: auto;
-  }
-  .button {
-    display: block;
-    margin: auto;
-    background-color: black;
-    color: white;
-    font-family: "roboto condensed", sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    font-size: 1.5em;
-  }
-}
-footer {
-  padding: 30px;
-  a {
-    display: block;
-    font-family: "roboto condensed" sans-serif;
-    font-style: italic;
-    font-weight: 700;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    color: $dark-grey;
-  }
-}
