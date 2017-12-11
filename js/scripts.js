@@ -3,9 +3,9 @@ $( document ).ready(function() {
 
   //when user touches screen...
   window.addEventListener('touchstart', function onFirstTouch() {
-    // or set some global variable
+    //if this var = true, different stuff will happen, becuase we will know the user is on mobile
     window.USER_IS_TOUCHING = true;
-    alert('wee');
+    alert('touch recognized');
 
     // we only need to know once that a human touched the screen, so we can stop listening now
     window.removeEventListener('touchstart', onFirstTouch, false);
@@ -49,11 +49,11 @@ $( document ).ready(function() {
    $('.carousel').carousel('next');
  });
 
- //on page load, individual case studies are hidden until their corresponding view button is clicked
+ // on page load, individual case studies are hidden until their corresponding view button is clicked
  $('.case-study').hide();
 
  //when you click a button on carousel, slide in case study
- $('.view-proj-btn').click(function(event){
+ $('.carousel-item').click(function(event){
    //slide in case studies div from the right
    $('.swapper').addClass('case-studies-visible');
    //dissappear about and contact sections
@@ -63,19 +63,19 @@ $( document ).ready(function() {
  //making button show corresponding case study
   $('#button-1').click(function(event){
     $('.case-study').hide();
-    $('#case-study-1').show();
+    $('.one').show();
   });
    $('#button-2').click(function(event){
      $('.case-study').hide();
-     $('#case-study-2').show();
+     $('.two').show();
    });
    $('#button-3').click(function(event){
      $('.case-study').hide();
-     $('#case-study-3').show();
+     $('.three').show();
    });
    $('#button-4').click(function(event){
      $('.case-study').hide();
-     $('#case-study-4').show();
+     $('.four').show();
    });
 
  //when you click the back arrow on case study, bring back carousel
