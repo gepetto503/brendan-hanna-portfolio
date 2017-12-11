@@ -1,4 +1,16 @@
 $( document ).ready(function() {
+  window.USER_IS_TOUCHING = null;
+
+  //when user touches screen...
+  window.addEventListener('touchstart', function onFirstTouch() {
+    // or set some global variable
+    window.USER_IS_TOUCHING = true;
+    alert('wee');
+
+    // we only need to know once that a human touched the screen, so we can stop listening now
+    window.removeEventListener('touchstart', onFirstTouch, false);
+  }, false);
+
   //make room for navbar
   $('body').offset({top:100, left: 0});
 
@@ -71,5 +83,7 @@ $( document ).ready(function() {
    $('.swapper').removeClass('case-studies-visible');
    $('header, #about, #contact').toggle();
   });
+
+  console.log(window.USER_IS_TOUCHING);
 
 });
