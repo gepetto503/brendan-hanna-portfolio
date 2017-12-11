@@ -24,6 +24,7 @@
 //----right-chevron
 
 .carousel-item {
+  cursor: pointer;
   //overlay clear until hover
   .overlay {
     position: absolute;
@@ -42,12 +43,16 @@
     padding: 10px;
     position: relative;
     .fa-chevron-left, .fa-chevron-right {
-      opacity: 0.5;
-      transition: .2s;
-      &:hover {
-        opacity: 1;
-        cursor: pointer;
-      }
+      display: none;
+      @include desktop {
+        display: block;
+        opacity: 0.5;
+        transition: .2s;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      };
     }
     //'view' button invisible until hovered
     .view-proj-btn {
@@ -56,16 +61,18 @@
   }
 
   //when you hover on a carousel slide...
-  &:hover {
-    //make the overlay not-clear
-    .overlay {
-      background-color: rgba(0,0,0,.5);
+  @include desktop {
+    &:hover {
+      //make the overlay not-clear
+      .overlay {
+        background-color: rgba(0,0,0,.5);
+      }
+      //make the button display
+      .view-proj-btn {
+        display: flex;
+      }
     }
-    //make the button display
-    .view-proj-btn {
-      display: flex;
-    }
-  }
+  };
 }
 
 .case-studies-visible {
@@ -109,46 +116,3 @@
 #npo {
   background-image: url('../images/npodonator.PNG');
 }
-
-//old work thumbnail section
-
-// #work {
-//   display: flex;
-//   flex-wrap: wrap;
-//   padding: 0;
-//   margin-top: 40px;
-// }
-
-
-// .view-button:hover ~ .overlay {
-//   width: 100%;
-//   height: 100%;
-//   background-color: rgba(225,225,225, 0.8);
-//   z-index: 1;
-// }
-
-
-
-// //thumbnails of each project on the landing page
-// .project-thumb {
-//   height: 220px;
-//
-//   background: center center no-repeat;
-//   background-size: cover;
-//
-//   cursor: pointer;
-//
-//   &:hover {
-//
-//   }
-//
-//   //flex
-//   flex-basis: 100%;
-//   @include tablet {
-//     flex-basis: 50%;
-//   }
-//   @include desktop {
-//     height: 320px;
-//     flex-basis: 25%;
-//   }
-// }
