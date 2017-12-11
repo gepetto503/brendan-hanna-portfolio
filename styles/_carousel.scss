@@ -1,0 +1,99 @@
+//take off section padding
+#work {
+  padding: 0;
+}
+
+.carousel-item {
+  //overlay clear until hover
+  .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    transition: .2s linear;
+  }
+  //wraps carousel previous/next chevrons and 'view' button
+  .slide-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    .fa-chevron-left, .fa-chevron-right {
+      opacity: 0;
+      transition: .2s;
+      @include touch {
+        opacity: 0.5;
+        &:hover {
+          opacity: 1;
+          cursor: pointer;
+        }
+      };
+    }
+    //'view' button invisible until hovered
+    .view-proj-btn {
+      display: none;
+    }
+  }
+
+  //when you hover on a carousel slide...
+  @include touch {
+    &:hover {
+      //make the overlay not-clear
+      .overlay {
+        background-color: rgba(0,0,0,.5);
+      }
+      //make the button display
+      .view-proj-btn {
+        display: flex;
+      }
+    }
+  };
+}
+
+
+.case-studies {
+  min-height: 60vh;
+  width: 100vw;
+  .back-chevron, .back {
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in;
+    @include touch {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    };
+  }
+}
+
+//bg properties that apply to all carousel images
+.carousel-item {
+  background: center center no-repeat;
+  background-size: cover;
+}
+
+//bg images for each individual carousel slide
+#style360 {
+  background-image: url('../images/style360.png');
+}
+
+#pokemon {
+  background-image: url('../images/pokemon.png');
+}
+
+#ebird
+ {
+  background-image: url('../images/ebird.png');
+}
+
+#sandwich {
+  background-image: url('../images/sandwich.png');
+}
+
+#npo {
+  background-image: url('../images/npodonator.PNG');
+}

@@ -19,3 +19,9 @@ $desktop-width: 1024px;
     @content;
   }
 }
+
+@mixin touch {
+  @media (hover: hover) {
+    @content;
+  }
+}

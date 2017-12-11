@@ -541,75 +541,6 @@ footer {
           margin-left: 15px;
           text-transform: uppercase; } }
 
-.swapper-wrapper {
-  overflow-x: hidden;
-  position: relative;
-  padding: 0; }
-
-.swapper {
-  display: flex;
-  position: relative;
-  transition: .5s ease-in;
-  right: 0; }
-  .swapper .carousel, .swapper .case-studies {
-    min-width: 99vw; }
-
-.carousel-item .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  transition: .2s linear; }
-.carousel-item .slide-wrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  position: relative; }
-  .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-    opacity: 0.5;
-    transition: .2s; }
-    .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
-      opacity: 1;
-      cursor: pointer; }
-  .carousel-item .slide-wrapper .view-proj-btn {
-    display: none; }
-.carousel-item:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.5); }
-.carousel-item:hover .view-proj-btn {
-  display: flex; }
-
-.case-studies-visible {
-  right: 100vw; }
-
-.case-studies {
-  min-height: 60vh;
-  width: 100vw;
-  padding: 20px; }
-  .case-studies .back-chevron, .case-studies .back {
-    cursor: pointer; }
-
-.carousel-item {
-  background: center center no-repeat;
-  background-size: cover; }
-
-#style360 {
-  background-image: url("../images/style360.png"); }
-
-#pokemon {
-  background-image: url("../images/pokemon.png"); }
-
-#ebird {
-  background-image: url("../images/ebird.png"); }
-
-#sandwich {
-  background-image: url("../images/sandwich.png"); }
-
-#npo {
-  background-image: url("../images/npodonator.PNG"); }
-
 @media (min-width: 600px) {
   .about-content {
     display: flex;
@@ -632,18 +563,8 @@ footer {
     .about-content .about-text {
       max-width: 50%; } }
 
-.swapper-wrapper {
-  overflow-x: hidden;
-  position: relative;
+#work {
   padding: 0; }
-
-.swapper {
-  display: flex;
-  position: relative;
-  transition: .5s ease-in;
-  right: 0; }
-  .swapper .carousel, .swapper .case-studies {
-    min-width: 99vw; }
 
 .carousel-item .overlay {
   position: absolute;
@@ -660,27 +581,34 @@ footer {
   padding: 10px;
   position: relative; }
   .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-    opacity: 0.5;
+    opacity: 0;
     transition: .2s; }
-    .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
-      opacity: 1;
-      cursor: pointer; }
+    @media (hover: hover) {
+      .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
+        opacity: 0.5; }
+        .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
+          opacity: 1;
+          cursor: pointer; } }
   .carousel-item .slide-wrapper .view-proj-btn {
     display: none; }
-.carousel-item:hover .overlay {
-  background-color: rgba(0, 0, 0, 0.5); }
-.carousel-item:hover .view-proj-btn {
-  display: flex; }
-
-.case-studies-visible {
-  right: 100vw; }
+@media (hover: hover) {
+  .carousel-item:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .carousel-item:hover .view-proj-btn {
+    display: flex; } }
 
 .case-studies {
   min-height: 60vh;
-  width: 100vw;
-  padding: 20px; }
+  width: 100vw; }
   .case-studies .back-chevron, .case-studies .back {
-    cursor: pointer; }
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in; }
+    @media (hover: hover) {
+      .case-studies .back-chevron, .case-studies .back {
+        opacity: 0.5; }
+        .case-studies .back-chevron:hover, .case-studies .back:hover {
+          opacity: 1; } }
 
 .carousel-item {
   background: center center no-repeat;
@@ -728,7 +656,7 @@ footer {
         .case-study .case-study-content-wrapper .case-study-content {
           height: 60vh;
           overflow-y: scroll; } }
-      .case-study .case-study-content-wrapper .case-study-content .style360-screenshot {
+      .case-study .case-study-content-wrapper .case-study-content .screenshot {
         width: 100%;
         margin: 0; }
 
