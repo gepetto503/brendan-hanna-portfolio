@@ -10,50 +10,63 @@
   position: relative;
   transition: .5s ease-in;
   right: 0;
-
-}
-
-//make sure one or the takes up the whole screen
-.carousel, .case-studies {
-  min-width: 100vw;
-}
-
-
-//hover/button behavior
-.button-wrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  .view-proj-btn {
-    display: none;
-    // position: absolute;
-    // top: 65%;
-    // left: 50%;
-    // transform: translateX(-50%);
+  //make sure one or the takes up the whole screen
+  .carousel, .case-studies {
+    min-width: 99vw;
   }
+}
+
+//carousel-item
+//--overlay
+//--slide-wrapper
+//----left-chevron
+//----button
+//----right-chevron
+
+.carousel-item {
+  //overlay clear until hover
   .overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0,0,0,0);
     transition: .2s linear;
   }
+  //wraps carousel previous/next chevrons and 'view' button
+  .slide-wrapper {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    .fa-chevron-left, .fa-chevron-right {
+      opacity: 0.5;
+      transition: .2s;
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+    //'view' button invisible until hovered
+    .view-proj-btn {
+      display: none;
+    }
+  }
+
+  //when you hover on a carousel slide...
   &:hover {
+    //make the overlay not-clear
     .overlay {
-      position: absolute;
-      height: 100%;
-      width: 100%;
       background-color: rgba(0,0,0,.5);
     }
+    //make the button display
     .view-proj-btn {
       display: flex;
     }
   }
-
-
 }
-
-
 
 .case-studies-visible {
   right: 100vw;
@@ -65,12 +78,6 @@
   padding: 20px;
   .back-chevron, .back {
     cursor: pointer;
-  }
-  .case-study {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
   }
 }
 

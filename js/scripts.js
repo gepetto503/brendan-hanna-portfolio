@@ -29,15 +29,23 @@ $( document ).ready(function() {
   //initialize materialize carousel
  $('.carousel.carousel-slider').carousel({fullWidth: true});
 
+ //make my previous and next chevrons on carousel Work
+ $('.carousel-prev').click(function(event){
+   $('.carousel').carousel('prev');
+ });
+ $('.carousel-next').click(function(event){
+   $('.carousel').carousel('next');
+ });
+
  //on page load, individual case studies are hidden until their corresponding view button is clicked
  $('.case-study').hide();
 
- //when you click a button on carousel, bring in case study
+ //when you click a button on carousel, slide in case study
  $('.view-proj-btn').click(function(event){
    //slide in case studies div from the right
    $('.swapper').addClass('case-studies-visible');
    //dissappear about and contact sections
-   $('#about, #contact').toggle([400]);
+   $('header, #about, #contact').toggle([400]);
  });
 
  //making button show corresponding case study
@@ -61,7 +69,7 @@ $( document ).ready(function() {
  //when you click the back arrow on case study, bring back carousel
  $('.back-chevron, .back').click(function(event){
    $('.swapper').removeClass('case-studies-visible');
-   $('#about, #contact').toggle([400]);
+   $('header, #about, #contact').toggle();
   });
 
 });
