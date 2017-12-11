@@ -554,39 +554,32 @@ footer {
   .swapper .carousel, .swapper .case-studies {
     min-width: 99vw; }
 
-.carousel-item {
-  cursor: pointer; }
-  .carousel-item .overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    transition: .2s linear; }
-  .carousel-item .slide-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: relative; }
-    .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-      display: none; }
-      @media (min-width: 1024px) {
-        .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-          display: block;
-          opacity: 0.5;
-          transition: .2s; }
-          .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
-            opacity: 1;
-            cursor: pointer; } }
-    .carousel-item .slide-wrapper .view-proj-btn {
-      display: none; }
-  @media (min-width: 1024px) {
-    .carousel-item:hover .overlay {
-      background-color: rgba(0, 0, 0, 0.5); }
-    .carousel-item:hover .view-proj-btn {
-      display: flex; } }
+.carousel-item .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: .2s linear; }
+.carousel-item .slide-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative; }
+  .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
+    opacity: 0.5;
+    transition: .2s; }
+    .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
+      opacity: 1;
+      cursor: pointer; }
+  .carousel-item .slide-wrapper .view-proj-btn {
+    display: none; }
+.carousel-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5); }
+.carousel-item:hover .view-proj-btn {
+  display: flex; }
 
 .case-studies-visible {
   right: 100vw; }
@@ -652,39 +645,32 @@ footer {
   .swapper .carousel, .swapper .case-studies {
     min-width: 99vw; }
 
-.carousel-item {
-  cursor: pointer; }
-  .carousel-item .overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0);
-    transition: .2s linear; }
-  .carousel-item .slide-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: relative; }
-    .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-      display: none; }
-      @media (min-width: 1024px) {
-        .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-          display: block;
-          opacity: 0.5;
-          transition: .2s; }
-          .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
-            opacity: 1;
-            cursor: pointer; } }
-    .carousel-item .slide-wrapper .view-proj-btn {
-      display: none; }
-  @media (min-width: 1024px) {
-    .carousel-item:hover .overlay {
-      background-color: rgba(0, 0, 0, 0.5); }
-    .carousel-item:hover .view-proj-btn {
-      display: flex; } }
+.carousel-item .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: .2s linear; }
+.carousel-item .slide-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative; }
+  .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
+    opacity: 0.5;
+    transition: .2s; }
+    .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
+      opacity: 1;
+      cursor: pointer; }
+  .carousel-item .slide-wrapper .view-proj-btn {
+    display: none; }
+.carousel-item:hover .overlay {
+  background-color: rgba(0, 0, 0, 0.5); }
+.carousel-item:hover .view-proj-btn {
+  display: flex; }
 
 .case-studies-visible {
   right: 100vw; }
