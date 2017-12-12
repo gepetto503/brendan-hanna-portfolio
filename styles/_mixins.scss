@@ -2,6 +2,7 @@ $lg-phone-width: 600px;
 $tablet-width: 768px;
 $desktop-width: 1024px;
 
+//if device screen is this big, do stuff
 @mixin lg-phone {
   @media (min-width: #{$lg-phone-width}) {
     @content;
@@ -20,6 +21,7 @@ $desktop-width: 1024px;
   }
 }
 
+//if the device has the ability to hover, do stuff
 @mixin touch {
   @media (hover: hover) {
     @content;

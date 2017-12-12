@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+#foo {
+  z-index: 100;
+}
+
 .carousel-item {
   //overlay clear until hover
   .overlay {
@@ -12,6 +16,14 @@
     background-color: rgba(0,0,0,0);
     transition: .2s linear;
   }
+  .clear-overlay {
+    position: absolute;
+    left: 8%;
+    height: 100%;
+    width: 85%;
+    z-index: 2;
+  }
+
   //wraps carousel previous/next chevrons and 'view' button
   .slide-wrapper {
     height: 100%;
@@ -24,6 +36,7 @@
     .fa-chevron-left, .fa-chevron-right {
       opacity: 0;
       transition: .2s;
+      z-index: 2;
       @include touch {
         opacity: 0.5;
         &:hover {

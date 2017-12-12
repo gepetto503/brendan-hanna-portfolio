@@ -5,7 +5,7 @@ $( document ).ready(function() {
   window.addEventListener('touchstart', function onFirstTouch() {
     // or set some global variable
     window.USER_IS_TOUCHING = true;
-    console.log('touch recognized');
+    console.log('first touch');
 
     // we only need to know once that a human touched the screen, so we can stop listening now
     window.removeEventListener('touchstart', onFirstTouch, false);
@@ -48,6 +48,14 @@ $( document ).ready(function() {
    $('.carousel').carousel('next');
  });
 
+ $('#nav-logo').on('touchstart', function () {
+   console.log('you touched nav logo');
+ });
+
+
+  $('#foo').on('touchstart', function () {
+    console.log('you touched foo');
+  });
  //'top' arrow at bottom of case studies on desktop
   $('.to-top-desktop').click(function(event){
    $('.case-study-content').animate({
