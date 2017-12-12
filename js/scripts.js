@@ -52,10 +52,6 @@ $( document ).ready(function() {
    console.log('you touched nav logo');
  });
 
-
-  $('#foo').on('touchstart', function () {
-    console.log('you touched foo');
-  });
  //'top' arrow at bottom of case studies on desktop
   $('.to-top-desktop').click(function(event){
    $('.case-study-content').animate({

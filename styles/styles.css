@@ -541,8 +541,20 @@ section {
 #work {
   padding: 0; }
 
-#foo {
-  z-index: 100; }
+#style360 {
+  background-image: url("../images/style360.png"); }
+
+#pokemon {
+  background-image: url("../images/pokemon.png"); }
+
+#ebird {
+  background-image: url("../images/ebird.jpg"); }
+
+#sandwich {
+  background-image: url("../images/sandwich.png"); }
+
+#npo {
+  background-image: url("../images/npodonator.PNG"); }
 
 .carousel-item .overlay {
   position: absolute;
@@ -599,75 +611,61 @@ section {
   background: center center no-repeat;
   background-size: cover; }
 
-#style360 {
-  background-image: url("../images/style360.png"); }
-
-#pokemon {
-  background-image: url("../images/pokemon.png"); }
-
-#ebird {
-  background-image: url("../images/ebird.png"); }
-
-#sandwich {
-  background-image: url("../images/sandwich.png"); }
-
-#npo {
-  background-image: url("../images/npodonator.PNG"); }
-
 .case-studies .back-chevron {
   margin: 0 0 0 20px;
   text-transform: uppercase; }
   .case-studies .back-chevron a {
     color: black; }
-
-.case-study {
+.case-studies .case-study {
   display: flex;
   flex-direction: column; }
   @media (min-width: 1024px) {
-    .case-study {
+    .case-studies .case-study {
       flex-direction: row; } }
   @media (min-width: 1024px) {
-    .case-study .case-study-left {
+    .case-studies .case-study .case-study-left, .case-studies .case-study .case-study-right {
       width: 48%; } }
-  .case-study .case-study-left .case-study-heading {
-    display: flex;
-    justify-content: space-around;
-    align-items: center; }
-    .case-study .case-study-left .case-study-heading h3 {
-      font-family: 'roboto condensed', sans-serif;
-      text-transform: uppercase;
-      font-weight: 700;
-      text-align: center; }
-    .case-study .case-study-left .case-study-heading .fa-chevron-left {
-      margin-left: 0;
-      margin-right: 20px; }
-  .case-study .case-study-left .case-study-text {
-    padding: 0 40px 40px 40px;
-    margin: 0 auto; }
-    @media (min-width: 768px) {
-      .case-study .case-study-left .case-study-text .case-study-bullets {
-        display: flex;
-        justify-content: center; }
-        .case-study .case-study-left .case-study-text .case-study-bullets .case-study-bullets-left {
-          margin-right: 20px; } }
-  @media (min-width: 1024px) {
-    .case-study .case-study-right {
-      width: 48%; } }
-  .case-study .case-study-right .case-study-content-wrapper {
-    overflow: hidden;
+
+.case-study-heading {
+  display: flex;
+  justify-content: space-around;
+  align-items: center; }
+  .case-study-heading h3 {
+    font-family: 'roboto condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center; }
+  .case-study-heading .fa-chevron-left {
+    margin-left: 0;
+    margin-right: 20px; }
+
+.case-study-text {
+  padding: 0 40px 40px 40px;
+  margin: 0 auto; }
+  @media (min-width: 768px) {
+    .case-study-text .case-study-bullets {
+      display: flex;
+      justify-content: space-between; }
+      .case-study-text .case-study-bullets .case-study-bullets-left {
+        margin-right: 20px;
+        flex-basis: 50%; } }
+
+.case-study-content-wrapper {
+  overflow: hidden;
+  width: 100%;
+  position: relative; }
+  .case-study-content-wrapper .case-study-content {
     width: 100%;
-    position: relative; }
-    .case-study .case-study-right .case-study-content-wrapper .case-study-content {
+    margin-left: 18px; }
+    @media (min-width: 1024px) {
+      .case-study-content-wrapper .case-study-content {
+        height: 80vh;
+        position: relative;
+        overflow-y: scroll; } }
+    .case-study-content-wrapper .case-study-content .screenshot {
       width: 100%;
-      margin-left: 18px; }
-      @media (min-width: 1024px) {
-        .case-study .case-study-right .case-study-content-wrapper .case-study-content {
-          height: 80vh;
-          position: relative;
-          overflow-y: scroll; } }
-      .case-study .case-study-right .case-study-content-wrapper .case-study-content .screenshot {
-        width: 100%;
-        margin: 0; }
+      margin: 0;
+      margin-top: -5px; }
 
 .to-top-desktop, .to-top-tablet-and-down {
   text-align: center;

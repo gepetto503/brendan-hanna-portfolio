@@ -3,9 +3,28 @@
   padding: 0;
 }
 
-#foo {
-  z-index: 100;
+//bg images for each individual carousel slide
+#style360 {
+  background-image: url('../images/style360.png');
 }
+
+#pokemon {
+  background-image: url('../images/pokemon.png');
+}
+
+#ebird
+ {
+  background-image: url('../images/ebird.jpg');
+}
+
+#sandwich {
+  background-image: url('../images/sandwich.png');
+}
+
+#npo {
+  background-image: url('../images/npodonator.PNG');
+}
+
 
 .carousel-item {
   //overlay clear until hover
@@ -87,26 +106,4 @@
 .carousel-item {
   background: center center no-repeat;
   background-size: cover;
-}
-
-//bg images for each individual carousel slide
-#style360 {
-  background-image: url('../images/style360.png');
-}
-
-#pokemon {
-  background-image: url('../images/pokemon.png');
-}
-
-#ebird
- {
-  background-image: url('../images/ebird.png');
-}
-
-#sandwich {
-  background-image: url('../images/sandwich.png');
-}
-
-#npo {
-  background-image: url('../images/npodonator.PNG');
 }
