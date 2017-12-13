@@ -26,7 +26,7 @@
         <a href="#top" id="nav-logo">
           <img src="images/small-box-logo.png" alt="BH logo">
         </a>
-        <i class="fa fa-bars hamburger" aria-hidden="true"></i>
+        <i class="fa fa-bars fa-2x hamburger" aria-hidden="true"></i>
         <!-- un-collapsed navbar links -->
         <ul class="navbar-links">
           <li><a href="#work">Work</a></li>
@@ -42,7 +42,6 @@
       </ul>
     </div>
 
-
     <!--header-->
     <header id="top">
         <h1>Brendan Hanna</h1>
@@ -50,8 +49,8 @@
     </header>
 
     <section id="work">
-      <!--carousel-->
-      <div class="carousel carousel-slider" data-indicators="true">
+      <!--desktop carousel-->
+      <div class="carousel carousel-slider" data-indicators="true" id="no-touch-carousel">
         <!-- slide 1 -->
         <div class="carousel-item" href="#one!" id="pokemon">
           <a href="pokemon.html">
@@ -105,7 +104,15 @@
         </div>
         <!--/slide 4-->
       </div>
-      <!--/carousel-->
+      <!--/desktop carousel-->
+      <!--mobile carousel-->
+      <div class="carousel carousel-slider" data-indicators="true" id="touch-carousel">
+        <a class="carousel-item" href="pokemon.html"><img src="images/pokemon.PNG" alt="screenshot of pokemon project"></a>
+        <a class="carousel-item" href="npo.html"><img src="images/npodonator.PNG" alt="screenshot of non profit donator project" style="{height: 100%;}"></a>
+        <a class="carousel-item" href="ebird.html"><img src="images/ebird.jpg" alt="screenshot of early bird tee shirt project"></a>
+        <a class="carousel-item" href="style-360.html"><img src="images/style360.png" alt="screenshot of style 360 project"></a>
+     </div>
+     <!--mobile carousel-->
     </section>
 
     <!--about section-->

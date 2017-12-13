@@ -3,6 +3,23 @@
   padding: 0;
 }
 
+//show touch-screen friendly carousel on touch screen devices
+#touch-carousel {
+  border: 2px dashed pink;
+  //touch mixin is incorrectly titled.  this is actually a rule for devices that have a hover capability, i.e. not touch-screen devices.
+  @include touch {
+    display: none;
+  };
+}
+
+//show non-touch screen friendly carousel on non-touch screen devices
+#no-touch-carousel {
+  display: none;
+  @include touch {
+    display: block;
+  };
+}
+
 //bg images for each individual carousel slide
 #style360 {
   background-image: url('../images/style360.png');

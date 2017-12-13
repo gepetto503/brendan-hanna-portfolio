@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
   //when user touches screen...
   window.addEventListener('touchstart', function onFirstTouch() {
-    // or set some global variable
+    //set global variable
     window.USER_IS_TOUCHING = true;
     console.log('first touch');
 
@@ -48,9 +48,13 @@ $( document ).ready(function() {
    $('.carousel').carousel('next');
  });
 
- $('#nav-logo').on('touchstart', function () {
-   console.log('you touched nav logo');
+ $('clear-overlay').click(function (event) {
+   console.log('you clicked clear overlay');
  });
+
+   $('#fuck').on('touchstart', function () {
+     console.log('you touched fuck');
+   });
 
  //'top' arrow at bottom of case studies on desktop
   $('.to-top-desktop').click(function(event){

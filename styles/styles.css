@@ -541,6 +541,18 @@ section {
 #work {
   padding: 0; }
 
+#touch-carousel {
+  border: 2px dashed pink; }
+  @media (hover: hover) {
+    #touch-carousel {
+      display: none; } }
+
+#no-touch-carousel {
+  display: none; }
+  @media (hover: hover) {
+    #no-touch-carousel {
+      display: block; } }
+
 #style360 {
   background-image: url("../images/style360.png"); }
 
