@@ -1,15 +1,15 @@
 $( document ).ready(function() {
-  window.USER_IS_TOUCHING = null;
-
-  //when user touches screen...
-  window.addEventListener('touchstart', function onFirstTouch() {
-    //set global variable
-    window.USER_IS_TOUCHING = true;
-    console.log('first touch');
-
-    // we only need to know once that a human touched the screen, so we can stop listening now
-    window.removeEventListener('touchstart', onFirstTouch, false);
-  }, false);
+  // window.USER_IS_TOUCHING = null;
+  //
+  // //when user touches screen...
+  // window.addEventListener('touchstart', function onFirstTouch() {
+  //   //set global variable
+  //   window.USER_IS_TOUCHING = true;
+  //   console.log('first touch');
+  //
+  //   // we only need to know once that a human touched the screen, so we can stop listening now
+  //   window.removeEventListener('touchstart', onFirstTouch, false);
+  // }, false);
 
   //make room for navbar
   $('body').offset({top:100, left: 0});

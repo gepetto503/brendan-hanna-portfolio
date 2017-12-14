@@ -3,10 +3,7 @@
   padding: 0;
 }
 
-//show touch-screen friendly carousel on touch screen devices
-#touch-carousel {
-  border: 2px dashed pink;
-  //touch mixin is incorrectly titled.  this is actually a rule for devices that have a hover capability, i.e. not touch-screen devices.
+#mobile-gallery {
   @include touch {
     display: none;
   };
@@ -40,6 +37,12 @@
 
 #npo {
   background-image: url('../images/npodonator.PNG');
+}
+
+.thumbnail {
+  height: 30vh;
+  background-size: cover;
+  background-position: center center;
 }
 
 

@@ -389,33 +389,6 @@ template {
 [hidden] {
   display: none; }
 
-/* label color */
-.input-field label {
-  color: #000; }
-
-/* label focus color */
-.input-field input[type=text]:focus + label {
-  color: red; }
-
-/* label underline focus color */
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-/* valid color */
-.input-field input[type=text].valid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-/* invalid color */
-.input-field input[type=text].invalid {
-  border-bottom: 1px solid #000;
-  box-shadow: 0 1px 0 0 #000; }
-
-/* icon prefix focus color */
-.input-field .prefix.active {
-  color: #000; }
-
 html {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -464,6 +437,33 @@ section {
 .horizontal-line-dark {
   border-top: 1px solid #C7C7C7;
   margin: 20px auto; }
+
+/* label color */
+.input-field label {
+  color: #000; }
+
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: red; }
+
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* valid color */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* invalid color */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #000; }
 
 .my-nav {
   display: flex;
@@ -541,11 +541,9 @@ section {
 #work {
   padding: 0; }
 
-#touch-carousel {
-  border: 2px dashed pink; }
-  @media (hover: hover) {
-    #touch-carousel {
-      display: none; } }
+@media (hover: hover) {
+  #mobile-gallery {
+    display: none; } }
 
 #no-touch-carousel {
   display: none; }
@@ -567,6 +565,11 @@ section {
 
 #npo {
   background-image: url("../images/npodonator.PNG"); }
+
+.thumbnail {
+  height: 30vh;
+  background-size: cover;
+  background-position: center center; }
 
 .carousel-item .overlay {
   position: absolute;

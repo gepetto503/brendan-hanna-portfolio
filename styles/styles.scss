@@ -1,14 +1,15 @@
 @import
-  "normalize",
-  "materialize-form-colors",
-  "vars",
-  "mixins",
-  "my-styles",
+  //global
+  "global/normalize",
+  "global/vars",
+  "global/mixins",
+  "global/base",
   //components
-  "navbar",
-  "about",
-  "carousel",
-  "case-studies",
-  "scroll-thingy",
-  "contact",
-  "footer";
+  "components/materialize-form-colors",
+  "components/navbar",
+  "components/about",
+  "components/carousel",
+  "components/case-studies",
+  "components/scroll-thingy",
+  "components/contact",
+  "components/footer";
