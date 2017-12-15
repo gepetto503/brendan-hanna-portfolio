@@ -400,7 +400,8 @@ html {
   box-sizing: inherit; }
 
 body {
-  font-size: 16px; }
+  font-size: 16px;
+  overflow-x: hidden; }
 
 header {
   text-align: center; }
@@ -478,6 +479,7 @@ section {
   .my-nav ul {
     margin: 0; }
   .my-nav .nav-top-bar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -494,14 +496,15 @@ section {
     display: none;
     background-color: white;
     padding: 20px;
-    padding-top: 15px;
+    padding-top: 25px;
     text-align: center;
     text-transform: uppercase;
     box-shadow: 5px 0px 2px grey;
     transition: 1s linear; }
     .my-nav .dropdown-links li a {
       color: black;
-      line-height: 1.75em;
+      line-height: 2em;
+      font-size: 1.25em;
       font-weight: 400;
       font-style: italic;
       border-bottom: 1px solid #C7C7C7; }
@@ -640,6 +643,8 @@ section {
   @media (min-width: 1024px) {
     .case-studies .case-study .case-study-left, .case-studies .case-study .case-study-right {
       width: 48%; } }
+  .case-studies .case-study .case-study-left {
+    padding: 40px; }
 
 .case-study-heading {
   display: flex;
@@ -649,13 +654,21 @@ section {
     font-family: 'roboto condensed', sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    text-align: center; }
+    text-align: center;
+    font-size: 2em; }
+    @media (min-width: 600px) {
+      .case-study-heading h3 {
+        font-size: 3em; } }
+  .case-study-heading .fa-chevron-left, .case-study-heading .fa-chevron-right {
+    font-size: 1.5em; }
+    @media (min-width: 600px) {
+      .case-study-heading .fa-chevron-left, .case-study-heading .fa-chevron-right {
+        font-size: 2em; } }
   .case-study-heading .fa-chevron-left {
     margin-left: 0;
     margin-right: 20px; }
 
 .case-study-text {
-  padding: 0 40px 40px 40px;
   margin: 0 auto; }
   @media (min-width: 768px) {
     .case-study-text .case-study-bullets {
@@ -670,10 +683,10 @@ section {
   width: 100%;
   position: relative; }
   .case-study-content-wrapper .case-study-content {
-    width: 100%;
-    margin-left: 18px; }
+    width: 100%; }
     @media (min-width: 1024px) {
       .case-study-content-wrapper .case-study-content {
+        margin-left: 18px;
         height: 80vh;
         position: relative;
         overflow-y: scroll; } }

@@ -17,6 +17,9 @@
         width: 48%;
       };
     }
+    .case-study-left {
+      padding: 40px;
+    };
   }
 }
 
@@ -30,6 +33,16 @@
     text-transform: uppercase;
     font-weight: 700;
     text-align: center;
+    font-size: 2em;
+    @include lg-phone {
+      font-size: 3em;
+    };
+  }
+  .fa-chevron-left, .fa-chevron-right {
+    font-size: 1.5em;
+    @include lg-phone {
+      font-size: 2em;
+    };
   }
   .fa-chevron-left {
     margin-left: 0;
@@ -38,7 +51,6 @@
 }
 
 .case-study-text {
-  padding: 0 40px 40px 40px;
   margin: 0 auto;
   @include desktop {
     // padding: 0px 60px 60px 60px;
@@ -66,9 +78,9 @@
 
   .case-study-content {
     width: 100%;
-    margin-left: 18px;
 
     @include desktop {
+      margin-left: 18px;
       height: 80vh;
       position: relative;
       overflow-y: scroll;

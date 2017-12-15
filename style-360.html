@@ -1,23 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <!--responsive meta tag-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brendan Hanna</title>
-    <!--materialize css cdn-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- google fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700i|Roboto:400,700" rel="stylesheet">
-    <!--my compiled scss-->
-    <link rel="stylesheet" href="styles/styles.css">
-    <!-- font awesome icons -->
-    <script src="https://use.fontawesome.com/8606092cd1.js"></script>
-    <!--jquery scripts-->
-    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
-    <!--my scripts-->
-    <script type="text/javascript" src="js/scripts.js"></script>
-  </head>
+<head>
+  <meta charset="utf-8">
+  <!--responsive meta tag-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brendan Hanna</title>
+  <!--materialize css cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- animate on scroll -->
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <!--my compiled scss-->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700i|Roboto:400,700" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://use.fontawesome.com/8606092cd1.js"></script>
+  <!--jquery scripts-->
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+  <!--my scripts-->
+  <script type="text/javascript" src="js/scripts.js"></script>
+</head>
   <body>
     <!-- my navbar -->
     <div class="my-nav">
@@ -26,7 +28,7 @@
         <a href="index.html#top" id="nav-logo">
           <img src="images/small-box-logo.png" alt="BH logo">
         </a>
-        <i class="fa fa-bars hamburger" aria-hidden="true"></i>
+        <i class="fa fa-bars hamburger fa-2x" aria-hidden="true"></i>
         <!-- un-collapsed navbar links -->
         <ul class="navbar-links">
           <li><a href="index.html#work">Work</a></li>
@@ -50,7 +52,7 @@
       <!--case study-->
       <div class="case-study" id="case-study-1">
         <div class="case-study-left">
-          <div class="case-study-heading">
+          <div class="case-study-heading" data-aos="fade-left">
             <a href="ebird.html">
               <i class="fa fa-chevron-left fa-2x back-chevron"></i>
             </a>
@@ -59,7 +61,7 @@
               <i class="fa fa-chevron-right fa-2x back-chevron"></i>
             </a>
           </div>
-          <div class="case-study-text">
+          <div class="case-study-text" data-aos="fade-right">
             <div class="case-study-bullets">
               <div class="case-study-bullets-left">
                 <p><strong>Company:</strong> SightWorks</p>
@@ -86,7 +88,7 @@
               </div>
             </div>
             <!--'content' (screenshots) -->
-            <div class="case-study-content">
+            <div class="case-study-content" data-aos="fade-up">
               <img src="images/style360-1.PNG" alt="screenshot of style360 project" class="screenshot">
               <img src="images/style360-2.PNG" alt="screenshot of style360 project" class="screenshot">
               <img src="images/style360-3.PNG" alt="screenshot of style360 project" class="screenshot">
@@ -116,5 +118,7 @@
     </footer>
     <!--materialize js cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--animate on scroll library js -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   </body>
 </html>

@@ -7,6 +7,8 @@
     <title>Brendan Hanna</title>
     <!--materialize css cdn-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- animate on scroll -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
     <!--my compiled scss-->
     <link rel="stylesheet" href="styles/styles.css">
     <!-- google fonts -->
@@ -43,32 +45,28 @@
     </div>
 
     <!--header-->
-    <header id="top">
+    <header id="top" data-aos="fade-left">
         <h1>Brendan Hanna</h1>
         <p>Front-End Developer, UI & Graphic Designer</p>
     </header>
 
-    <section id="work">
+    <section id="work" data-aos="fade-right">
       <!--mobile gallery-->
       <div id="mobile-gallery">
-        
         <a href="pokemon.html">
           <div class="thumbnail" id="pokemon"></div>
         </a>
-
         <a href="npo.html">
           <div class="thumbnail" id="npo"></div>
         </a>
-
         <a href="ebird.html">
           <div class="thumbnail" id="ebird"></div>
         </a>
-
         <a href="style-360.html">
           <div class="thumbnail" id="style360"></div>
         </a>
-
       </div>
+      <!-- /mobile gallery -->
 
 
       <!--desktop carousel-->
@@ -130,7 +128,7 @@
     </section>
 
     <!--about section-->
-    <section id="about">
+    <section id="about" data-aos="fade-right">
       <h3>About</h3>
       <div class="horizontal-line"></div>
       <div class="about-content">
@@ -143,7 +141,7 @@
     </section>
 
     <!-- contact section -->
-    <section class="light-bg" id="contact">
+    <section class="light-bg" id="contact" data-aos="fade-up">
       <form>
         <h3>Contact</h3>
         <div class="input-field">
@@ -166,5 +164,7 @@
 
     <!--materialize js cdn-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--animate on scroll library js -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
   </body>
 </html>
