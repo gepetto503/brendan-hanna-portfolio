@@ -1,7 +1,14 @@
 .display-on-mobile {
-  @include desktop {
+  @include tablet {
     display: none;
   }
+}
+
+.display-on-tablet {
+  display: none;
+  @include tablet {
+    display: block;
+  };
 }
 
 .display-on-desktop {
