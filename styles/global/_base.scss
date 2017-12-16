@@ -15,7 +15,17 @@ html {
 
 body {
   font-size: 16px;
+  //stops animation library from causing horizontal scrolling
   overflow-x: hidden;
+  //for fade-in/fade-out on load
+  opacity: 1;
+  transition: 1s opacity;
+}
+
+//for fade-in/fade-out on load
+body.fade-out {
+    opacity: 0;
+    transition: none;
 }
 
 header {

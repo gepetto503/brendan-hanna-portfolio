@@ -21,6 +21,9 @@
     <script type="text/javascript" src="js/scripts.js"></script>
   </head>
   <body>
+    <!--fade-in page, inline script needed to avoid flickering.  adds opacity: 0 class to body, which is removed by first line of JS in scripts.js-->
+    <script>document.body.className += ' fade-out';</script>
+
     <!-- my navbar -->
     <div class="my-nav">
       <!--top bar-->
@@ -98,17 +101,7 @@
         </div>
         <!--/slide 2-->
         <!-- slide 3 -->
-        <div class="carousel-item" href="#three!" id="npo">
-          <a href="npo.html">
-            <div class="clear-overlay"></div>
-          </a>
-          <div class="overlay"></div>
-          <div class="slide-wrapper">
-              <i class="fa fa-chevron-left fa-2x white-text carousel-prev"></i>
-              <button class="waves-effect waves-light btn-large white black-text view-proj-btn">view project</button>
-              <i class="fa fa-chevron-right fa-2x white-text carousel-next"></i>
-          </div>
-        </div>
+
         <!--/slide 3-->
         <!-- slide 4 -->
         <div class="carousel-item" href="#four!" id="ebird">
@@ -128,7 +121,7 @@
     </section>
 
     <!--about section-->
-    <section id="about" data-aos="fade-right">
+    <section id="about" data-aos="fade-left">
       <h3>About</h3>
       <div class="horizontal-line"></div>
       <div class="about-content">
@@ -141,7 +134,7 @@
     </section>
 
     <!-- contact section -->
-    <section class="light-bg" id="contact" data-aos="fade-up">
+    <section class="light-bg" id="contact" data-aos="fade-right">
       <form>
         <h3>Contact</h3>
         <div class="input-field">

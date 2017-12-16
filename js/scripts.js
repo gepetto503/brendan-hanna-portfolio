@@ -1,19 +1,17 @@
 $( document ).ready(function() {
 
-  // $('#about').load(function() {
-    // $('#about').addClass('animated fadeInLeft');
-  // });
-
-
-
-  //make room for navbar
-  $('body').offset({top:100, left: 0});
-  //make dropdown open and close when hamburger
-
+  //for fade-in/out of page... removes the opacity: 0 class when pages loaded
+  $('body').removeClass('fade-out');
+  // initialize fade on scroll library
   AOS.init({
     duration: 1000,
   });
 
+
+  //make room for navbar at top
+  $('body').offset({top:100, left: 0});
+
+  //make dropdown open and close when hamburger
   $('.hamburger').click(function(event){
     $('.dropdown-links').toggle();
   });

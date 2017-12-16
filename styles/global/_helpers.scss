@@ -1,0 +1,12 @@
+.display-on-mobile {
+  @include desktop {
+    display: none;
+  }
+}
+
+.display-on-desktop {
+  display: none;
+  @include desktop {
+    display: block;
+  };
+}
