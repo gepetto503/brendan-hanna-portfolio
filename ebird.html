@@ -21,6 +21,8 @@
   <script type="text/javascript" src="js/scripts.js"></script>
 </head>
   <body>
+    <!--fade-in page, inline script needed to avoid flickering.  adds opacity: 0 class to body, which is removed by first line of JS in scripts.js-->
+    <script>document.body.className += ' fade-out';</script>
     <!-- my navbar -->
     <div class="my-nav">
       <!--top bar-->
