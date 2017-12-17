@@ -82,7 +82,6 @@
   .case-study-content {
     width: 100%;
     padding: 20px;
-    // border: 1px solid blue;
 
     @include desktop {
       margin-left: 18px;
@@ -92,12 +91,24 @@
     };
     .screenshot {
       width: 100%;
+      // height: 70vh;
       display: block;
-      margin: 10px auto;
+      margin: 0;
+      // background-position: center center;
+      // background-size: cover;
+      // @include desktop {
+      //   height: 30vh;
+      // };
     }
   }
 }
 
+// #style-360-1 {
+//   background-image: url('../images/style360-mobile-1.PNG');
+//   @include lg-phone {
+//     background-image: url('../images/style360-1.PNG');
+//   };
+// }
 
 //back-to-top arrows
 .to-top-desktop, .to-top-tablet-and-down {

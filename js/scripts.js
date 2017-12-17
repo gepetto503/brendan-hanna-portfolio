@@ -46,13 +46,10 @@ $( document ).ready(function() {
    $('.carousel').carousel('next');
  });
 
- $('clear-overlay').click(function (event) {
-   console.log('you clicked clear overlay');
- });
+ // $('clear-overlay').click(function (event) {
+ //   console.log('you clicked clear overlay');
+ // });
 
-   $('#fuck').on('touchstart', function () {
-     console.log('you touched fuck');
-   });
 
  //'top' arrow at bottom of case studies on desktop
   $('.to-top-desktop').click(function(event){
@@ -70,7 +67,10 @@ $( document ).ready(function() {
  });
 
  $('.case-study-content').scroll(function() {
-   if($('.case-study-content').scrollTop()>= 100){
+   // console.log($('.case-study-content').scrollTop());
+   console.log($('.screenshots').scrollTop());
+   if($('.screenshots').scrollTop()>= 10){
+
      $('.scroll-downs').animate({opacity: 0});
    }
  });
