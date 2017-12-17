@@ -75,6 +75,8 @@ $( document ).ready(function() {
    }
  });
 
-
+ // $('#style-link').click(function(event){
+ //   alert('on live site, use "style360" for username and password');
+ // });
 
 });
