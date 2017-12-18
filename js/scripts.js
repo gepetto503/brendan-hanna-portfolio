@@ -1,5 +1,7 @@
 $( document ).ready(function() {
 
+  //animation stuff
+
   //for fade-in/out of page... removes the opacity: 0 class when pages loaded
   $('body').removeClass('fade-out');
   // initialize fade on scroll library
@@ -7,6 +9,7 @@ $( document ).ready(function() {
     duration: 1000,
   });
 
+  //navbar stuff
 
   //make room for navbar at top
   $('body').offset({top:100, left: 0});
@@ -23,7 +26,6 @@ $( document ).ready(function() {
     event.stopPropagation();
   });
 
-
   //make page scroll to section when you click nav link
   $('.my-nav a, #nav-logo').click(function(event) {
     var id = $(this).attr("href");
@@ -34,6 +36,8 @@ $( document ).ready(function() {
     });
     $('.dropdown-links').hide();
   });
+
+  //carousel stuff
 
   //initialize materialize carousel
  $('.carousel.carousel-slider').carousel({fullWidth: true});
@@ -46,10 +50,7 @@ $( document ).ready(function() {
    $('.carousel').carousel('next');
  });
 
- // $('clear-overlay').click(function (event) {
- //   console.log('you clicked clear overlay');
- // });
-
+ //case study stuff
 
  //'top' arrow at bottom of case studies on desktop
   $('.to-top-desktop').click(function(event){
@@ -66,17 +67,13 @@ $( document ).ready(function() {
    }, 1000);
  });
 
- $('.case-study-content').scroll(function() {
-   // console.log($('.case-study-content').scrollTop());
-   console.log($('.screenshots').scrollTop());
-   if($('.screenshots').scrollTop()>= 10){
+//mouse scroll icon fade-out when scrolled
+$('.case-study-content').scroll(function() {
+  if($('.first').scrollTop()>= 100){
+    alert('a thing!');
+    $('.scroll-downs').animate({opacity: 0});
+  }
+});
 
-     $('.scroll-downs').animate({opacity: 0});
-   }
- });
-
- // $('#style-link').click(function(event){
- //   alert('on live site, use "style360" for username and password');
- // });
 
 });

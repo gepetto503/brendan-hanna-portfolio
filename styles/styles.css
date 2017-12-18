@@ -738,7 +738,8 @@ header {
   display: none; }
   @media (min-width: 1024px) {
     .to-top-desktop {
-      display: block; } }
+      display: block;
+      z-index: 2; } }
 
 @media (min-width: 1024px) {
   .to-top-tablet-and-down {
@@ -755,7 +756,7 @@ header {
     width: 50px;
     border: 3px solid white;
     border-radius: 25px;
-    opacity: 0.5; }
+    opacity: 0.6; }
     .mousey .scroller {
       position: absolute;
       top: 30%;

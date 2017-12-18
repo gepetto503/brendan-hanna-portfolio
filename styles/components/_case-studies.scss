@@ -103,12 +103,6 @@
   }
 }
 
-// #style-360-1 {
-//   background-image: url('../images/style360-mobile-1.PNG');
-//   @include lg-phone {
-//     background-image: url('../images/style360-1.PNG');
-//   };
-// }
 
 //back-to-top arrows
 .to-top-desktop, .to-top-tablet-and-down {
@@ -132,6 +126,7 @@
   display: none;
   @include desktop {
     display: block;
+    z-index: 2;
   };
 }
 .to-top-tablet-and-down {
