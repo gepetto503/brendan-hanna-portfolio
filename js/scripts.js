@@ -69,8 +69,10 @@ $( document ).ready(function() {
 
 //mouse scroll icon fade-out when scrolled
 $('.case-study-content').scroll(function() {
-  if($('.first').scrollTop()>= 100){
-    alert('a thing!');
+  // alert('i recognize you scrolling case-study-content');
+  // console.log($('.case-study-content').scrollTop());
+  if($('.case-study-content').scrollTop()>= 100){
+    // alert('a thing!');
     $('.scroll-downs').animate({opacity: 0});
   }
 });

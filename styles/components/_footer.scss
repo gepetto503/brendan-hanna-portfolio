@@ -10,7 +10,7 @@ footer {
     color: black;
     opacity: .5;
     transition: all .1s ease-in;
-    @include touch {
+    @include hover {
       &:hover {
         opacity: 1;
       }

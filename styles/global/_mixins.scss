@@ -22,7 +22,7 @@ $desktop-width: 1024px;
 }
 
 //if the device has the ability to hover, do stuff
-@mixin touch {
+@mixin hover {
   @media (hover: hover) {
     @content;
   }

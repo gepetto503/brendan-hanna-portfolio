@@ -651,11 +651,19 @@ header {
   background: center center no-repeat;
   background-size: cover; }
 
+.case-studies a {
+  text-decoration: underline;
+  color: black; }
+  @media (hover: hover) {
+    .case-studies a {
+      text-decoration: none;
+      opacity: 0.5;
+      transition: opacity .25s; }
+      .case-studies a:hover {
+        opacity: 1; } }
 .case-studies .back-chevron {
   margin: 0 0 0 20px;
   text-transform: uppercase; }
-  .case-studies .back-chevron a {
-    color: black; }
 .case-studies .case-study {
   display: flex;
   flex-direction: column; }
@@ -749,7 +757,7 @@ header {
   .mousey {
     position: absolute;
     z-index: 1;
-    bottom: 10%;
+    bottom: 20%;
     left: 50%;
     transform: translateX(-50%);
     height: 85px;
