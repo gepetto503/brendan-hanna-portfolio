@@ -1,7 +1,13 @@
 #contact {
-  form {
+  form, .contact-text {
     max-width: $tablet-width;
     margin: auto;
+  }
+  .contact-text {
+    margin: 40px auto;
+    text-align: center;
+    // font-size: 1.2em;
+    font-weight: 400;
   }
   .button {
     display: block;

@@ -726,7 +726,7 @@ header {
     .case-study-content-wrapper .case-study-content .screenshot {
       width: 100%;
       display: block;
-      margin: 0; }
+      margin: 20px 0; }
 
 .to-top-desktop, .to-top-tablet-and-down {
   text-align: center;
@@ -785,9 +785,13 @@ header {
   100% {
     transform: translateY(15px);
     opacity: 0; } }
-#contact form {
+#contact form, #contact .contact-text {
   max-width: 768px;
   margin: auto; }
+#contact .contact-text {
+  margin: 40px auto;
+  text-align: center;
+  font-weight: 400; }
 #contact .button {
   display: block;
   margin: auto;
