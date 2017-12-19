@@ -1,0 +1,19 @@
+.display-on-mobile {
+  @include tablet {
+    display: none;
+  }
+}
+
+.display-on-tablet {
+  display: none;
+  @include tablet {
+    display: block;
+  };
+}
+
+.display-on-desktop {
+  display: none;
+  @include desktop {
+    display: block;
+  };
+}

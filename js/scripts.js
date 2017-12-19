@@ -1,30 +1,29 @@
 $( document ).ready(function() {
-  window.USER_IS_TOUCHING = null;
 
-  //when user touches screen...
-  window.addEventListener('touchstart', function onFirstTouch() {
-    //if this var = true, different stuff will happen, becuase we will know the user is on mobile
-    window.USER_IS_TOUCHING = true;
-    alert('touch recognized');
+  //animation stuff
 
-    // we only need to know once that a human touched the screen, so we can stop listening now
-    window.removeEventListener('touchstart', onFirstTouch, false);
-  }, false);
+  //for fade-in/out of page... removes the opacity: 0 class when pages loaded
+  $('body').removeClass('fade-out');
+  // initialize fade on scroll library
+  AOS.init({
+    duration: 1000,
+  });
 
-  //make room for navbar
+  //navbar stuff
+
+  //make room for navbar at top
   $('body').offset({top:100, left: 0});
 
+  //make dropdown open and close when hamburger
+  $('.hamburger').click(function(event){
+    $('.dropdown-links').toggle();
+  });
   //make dropdown close when you click off it
   $('html').click(function() {
     $('.dropdown-links').hide();
   });
   $('.my-nav').click(function(event){
     event.stopPropagation();
-  });
-
-  //make dropdown close when you click hamburger
-  $('.hamburger').click(function(event){
-    $('.dropdown-links').toggle();
   });
 
   //make page scroll to section when you click nav link
@@ -38,6 +37,8 @@ $( document ).ready(function() {
     $('.dropdown-links').hide();
   });
 
+  //carousel stuff
+
   //initialize materialize carousel
  $('.carousel.carousel-slider').carousel({fullWidth: true});
 
@@ -49,41 +50,32 @@ $( document ).ready(function() {
    $('.carousel').carousel('next');
  });
 
- // on page load, individual case studies are hidden until their corresponding view button is clicked
- $('.case-study').hide();
+ //case study stuff
 
- //when you click a button on carousel, slide in case study
- $('.carousel-item').click(function(event){
-   //slide in case studies div from the right
-   $('.swapper').addClass('case-studies-visible');
-   //dissappear about and contact sections
-   $('header, #about, #contact').toggle([400]);
+ //'top' arrow at bottom of case studies on desktop
+  $('.to-top-desktop').click(function(event){
+   $('.case-study-content').animate({
+     scrollTop: 0
+   }, 1000);
  });
 
- //making button show corresponding case study
-  $('#button-1').click(function(event){
-    $('.case-study').hide();
-    $('.one').show();
-  });
-   $('#button-2').click(function(event){
-     $('.case-study').hide();
-     $('.two').show();
-   });
-   $('#button-3').click(function(event){
-     $('.case-study').hide();
-     $('.three').show();
-   });
-   $('#button-4').click(function(event){
-     $('.case-study').hide();
-     $('.four').show();
-   });
+ //'top' arrow at bottom of case studies on mobile/tablet
+  $('.to-top-tablet-and-down').click(function(event){
+    // alert('boo');
+   $('html, body').animate({
+     scrollTop: 0
+   }, 1000);
+ });
 
- //when you click the back arrow on case study, bring back carousel
- $('.back-chevron, .back').click(function(event){
-   $('.swapper').removeClass('case-studies-visible');
-   $('header, #about, #contact').toggle();
-  });
+//mouse scroll icon fade-out when scrolled
+$('.case-study-content').scroll(function() {
+  // alert('i recognize you scrolling case-study-content');
+  // console.log($('.case-study-content').scrollTop());
+  if($('.case-study-content').scrollTop()>= 100){
+    // alert('a thing!');
+    $('.scroll-downs').animate({opacity: 0});
+  }
+});
 
-  console.log(window.USER_IS_TOUCHING);
 
 });

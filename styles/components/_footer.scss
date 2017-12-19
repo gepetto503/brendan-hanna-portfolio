@@ -1,0 +1,19 @@
+footer {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  a {
+    text-transform: uppercase;
+    font-family: "roboto condensed", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    color: black;
+    opacity: .5;
+    transition: all .1s ease-in;
+    @include hover {
+      &:hover {
+        opacity: 1;
+      }
+    };
+  }
+}

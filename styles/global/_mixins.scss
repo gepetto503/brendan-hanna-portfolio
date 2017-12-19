@@ -1,0 +1,29 @@
+$lg-phone-width: 600px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+//if device screen is this big, do stuff
+@mixin lg-phone {
+  @media (min-width: #{$lg-phone-width}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+//if the device has the ability to hover, do stuff
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}
