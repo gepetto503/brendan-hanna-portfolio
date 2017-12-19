@@ -67,15 +67,17 @@ $( document ).ready(function() {
    }, 1000);
  });
 
-//mouse scroll icon fade-out when scrolled
-$('.case-study-content').scroll(function() {
-  // alert('i recognize you scrolling case-study-content');
-  // console.log($('.case-study-content').scrollTop());
-  if($('.case-study-content').scrollTop()>= 100){
-    // alert('a thing!');
-    $('.scroll-downs').animate({opacity: 0});
-  }
-});
+  //mouse scroll icon fade-out when scrolled
+  $('.case-study-content').scroll(function() {
+    if ($('.case-study-content').scrollTop() >= 100) {
+      $('.scroll-downs').animate({opacity: 0});
+    }
+  });
 
+  $(window).scroll(function() {
+    if ($(window).scrollTop() >= 1) {
+      $('.scroll-downs').hide();
+    }
+  });
 
 });
