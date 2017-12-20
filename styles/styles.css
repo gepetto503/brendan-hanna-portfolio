@@ -764,7 +764,8 @@ header {
     width: 50px;
     border: 3px solid white;
     border-radius: 25px;
-    opacity: 0.6; }
+    opacity: 0.6;
+    transition: all .5s ease-in; }
     .mousey .scroller {
       position: absolute;
       top: 30%;
@@ -788,10 +789,6 @@ header {
 #contact form, #contact .contact-text {
   max-width: 768px;
   margin: auto; }
-#contact .contact-text {
-  margin: 40px auto;
-  text-align: center;
-  font-weight: 400; }
 #contact .button {
   display: block;
   margin: auto;
