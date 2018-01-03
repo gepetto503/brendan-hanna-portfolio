@@ -3,12 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    max-width: $tablet-width;
-    margin: auto;
-  };
-  @include desktop {
-    max-width: $desktop-width;
-  };
+  }
   img {
     display: block;
     margin: 30px auto;

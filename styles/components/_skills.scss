@@ -1,0 +1,25 @@
+.skills-wrapper {
+  // border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items:stretch;
+  .skill-wrapper {
+    // border: 1px solid blue;
+    flex-basis: 100%;
+    text-align: center;
+
+    @include tablet {
+      flex-basis: 200px;
+      text-align: left;
+    };
+    font-weight: 700;
+    h4 {
+      font-family: "roboto condensed", sans-serif;
+      text-transform: uppercase;
+      font-size: 1.4em;
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+}

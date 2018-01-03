@@ -1,0 +1,32 @@
+h1 {
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  @include tablet {
+    font-size: 3.25em;
+  };
+  @include desktop {
+    font-size: 3.5em;
+  };
+  @include lg-desktop {
+    font-size: 4em;
+  };
+}
+
+
+h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "roboto condensed", sans-serif;
+  font-style: italic;
+  color: $grey;
+}
+p, ul>li {
+  font-weight: 700;
+  @include desktop {
+    font-size: 1.2em;
+  };
+}
+p {
+  line-height: 1.5em;
+}

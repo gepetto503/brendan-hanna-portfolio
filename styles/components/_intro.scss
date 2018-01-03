@@ -1,0 +1,15 @@
+.lead {
+  text-align: center;
+  margin: auto;
+  @include lg-phone {
+    text-align: left;
+    max-width: 77%;
+  };
+  // @include tablet {
+  //   max-width: 66%;
+  // }
+  @include desktop {
+    // max-width: 50%;
+    font-size: 1.4em;
+  };
+}

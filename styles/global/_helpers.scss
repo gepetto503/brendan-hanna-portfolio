@@ -17,3 +17,14 @@
     display: block;
   };
 }
+
+//this is so the text of any section it's applied to doesnt span the whole screen
+.restrain-width {
+  @include lg-phone {
+    max-width: $tablet-width;
+    margin: auto;
+  };
+  @include desktop {
+    max-width: $desktop-width;
+  };
+}
