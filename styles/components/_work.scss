@@ -1,6 +1,9 @@
-//take off section padding
+//take off section padding so carousel extends full-width of page, but put it back on the horizontal line for consistency with other sections
 #work {
   padding: 0;
+  .horizontal-line {
+    margin: 20px 30px;
+  }
 }
 
 #mobile-gallery {

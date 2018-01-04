@@ -33,19 +33,9 @@ body.fade-out {
 section {
   padding: 30px;
   min-width: 200px;
-  // h3 {
-  //   text-transform: uppercase;
-  //   text-align: center;
-  //   font-family: "roboto condensed", sans-serif;
-  //   font-style: italic;
-  //   color: $grey;
-  // }
-  // p, ul>li {
-  //   font-weight: 700;
-  // }
-  // p {
-  //   line-height: 1.5em;
-  // }
+  @include desktop {
+    padding: 50px 30px;
+  };
 }
 
 //some sections have light backgrounds

@@ -412,6 +412,9 @@ body.fade-out {
 section {
   padding: 30px;
   min-width: 200px; }
+  @media (min-width: 1024px) {
+    section {
+      padding: 50px 30px; } }
 
 .light-bg {
   background-color: #E1E1E1; }
@@ -494,94 +497,6 @@ p {
   @media (min-width: 1024px) {
     .about-content .about-text {
       max-width: 50%; } }
-
-#work {
-  padding: 0; }
-
-@media (hover: hover) {
-  #mobile-gallery {
-    display: none; } }
-
-#no-touch-carousel {
-  display: none; }
-  @media (hover: hover) {
-    #no-touch-carousel {
-      display: block; } }
-
-#style360 {
-  background-image: url("../images/style360.png"); }
-
-#pokemon {
-  background-image: url("../images/pokemon.png"); }
-
-#ebird {
-  background-image: url("../images/ebird.jpg"); }
-
-#sandwich {
-  background-image: url("../images/sandwich.png"); }
-
-#npo {
-  background-image: url("../images/npo-donator.png"); }
-
-.thumbnail {
-  height: 30vh;
-  background-size: cover;
-  background-position: center center; }
-
-.carousel-item .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  transition: .2s linear; }
-.carousel-item .clear-overlay {
-  position: absolute;
-  left: 8%;
-  height: 100%;
-  width: 85%;
-  z-index: 2; }
-.carousel-item .slide-wrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  position: relative; }
-  .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-    opacity: 0;
-    transition: .2s;
-    z-index: 2; }
-    @media (hover: hover) {
-      .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-        opacity: 0.5; }
-        .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
-          opacity: 1;
-          cursor: pointer; } }
-  .carousel-item .slide-wrapper .view-proj-btn {
-    display: none; }
-@media (hover: hover) {
-  .carousel-item:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.5); }
-  .carousel-item:hover .view-proj-btn {
-    display: flex; } }
-
-.case-studies {
-  min-height: 60vh;
-  width: 100vw; }
-  .case-studies .back-chevron, .case-studies .back {
-    color: black;
-    cursor: pointer;
-    transition: .2s ease-in; }
-    @media (hover: hover) {
-      .case-studies .back-chevron, .case-studies .back {
-        opacity: 0.5; }
-        .case-studies .back-chevron:hover, .case-studies .back:hover {
-          opacity: 1; } }
-
-.carousel-item {
-  background: center center no-repeat;
-  background-size: cover; }
 
 .case-studies a {
   text-decoration: underline;
@@ -715,9 +630,10 @@ footer {
         opacity: 1; } }
 
 header {
-  text-align: center;
   background: url("../images/hero.jpg") center center no-repeat;
   background-size: cover;
+  position: relative;
+  text-align: center;
   color: white;
   padding: 100px;
   width: 100vw;
@@ -736,8 +652,16 @@ header {
     font-size: 1.5em;
     margin-top: -20px; }
 
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.4); }
+
 .lead {
-  text-align: center;
+  text-align: left;
   margin: auto; }
   @media (min-width: 600px) {
     .lead {
@@ -879,5 +803,95 @@ header {
       font-size: 1.4em;
       font-weight: 700;
       font-style: italic; }
+
+#work {
+  padding: 0; }
+  #work .horizontal-line {
+    margin: 20px 30px; }
+
+@media (hover: hover) {
+  #mobile-gallery {
+    display: none; } }
+
+#no-touch-carousel {
+  display: none; }
+  @media (hover: hover) {
+    #no-touch-carousel {
+      display: block; } }
+
+#style360 {
+  background-image: url("../images/style360.png"); }
+
+#pokemon {
+  background-image: url("../images/pokemon.png"); }
+
+#ebird {
+  background-image: url("../images/ebird.jpg"); }
+
+#sandwich {
+  background-image: url("../images/sandwich.png"); }
+
+#npo {
+  background-image: url("../images/npo-donator.png"); }
+
+.thumbnail {
+  height: 30vh;
+  background-size: cover;
+  background-position: center center; }
+
+.carousel-item .overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  transition: .2s linear; }
+.carousel-item .clear-overlay {
+  position: absolute;
+  left: 8%;
+  height: 100%;
+  width: 85%;
+  z-index: 2; }
+.carousel-item .slide-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  position: relative; }
+  .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
+    opacity: 0;
+    transition: .2s;
+    z-index: 2; }
+    @media (hover: hover) {
+      .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
+        opacity: 0.5; }
+        .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
+          opacity: 1;
+          cursor: pointer; } }
+  .carousel-item .slide-wrapper .view-proj-btn {
+    display: none; }
+@media (hover: hover) {
+  .carousel-item:hover .overlay {
+    background-color: rgba(0, 0, 0, 0.5); }
+  .carousel-item:hover .view-proj-btn {
+    display: flex; } }
+
+.case-studies {
+  min-height: 60vh;
+  width: 100vw; }
+  .case-studies .back-chevron, .case-studies .back {
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in; }
+    @media (hover: hover) {
+      .case-studies .back-chevron, .case-studies .back {
+        opacity: 0.5; }
+        .case-studies .back-chevron:hover, .case-studies .back:hover {
+          opacity: 1; } }
+
+.carousel-item {
+  background: center center no-repeat;
+  background-size: cover; }
 
 /*# sourceMappingURL=styles.css.map */
