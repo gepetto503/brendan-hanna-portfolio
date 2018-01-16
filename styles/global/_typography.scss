@@ -22,11 +22,10 @@ h3 {
   color: $grey;
 }
 p, ul>li {
-  font-weight: 700;
+  font-weight: 300;
+  font-size: 1.2em;
+  line-height: 1.5em;
   @include desktop {
     font-size: 1.2em;
   };
-}
-p {
-  line-height: 1.5em;
 }
