@@ -1,7 +1,7 @@
 footer {
   padding: 20px;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   a {
     text-transform: uppercase;
     font-family: "roboto condensed", sans-serif;
@@ -10,6 +10,7 @@ footer {
     color: black;
     opacity: .5;
     transition: all .1s ease-in;
+    margin: auto 8px;
     @include hover {
       &:hover {
         opacity: 1;

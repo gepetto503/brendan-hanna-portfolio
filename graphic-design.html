@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!--responsive meta tag-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brendan Hanna</title>
+  <!--materialize css cdn-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <!-- animate on scroll -->
+  <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+  <!--my compiled scss-->
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- google fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700i|Roboto:400,700" rel="stylesheet">
+  <!-- font awesome icons -->
+  <script src="https://use.fontawesome.com/8606092cd1.js"></script>
+  <!--jquery scripts-->
+  <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+  <!--my scripts-->
+  <script type="text/javascript" src="js/scripts.js"></script>
+</head>
+  <body>
+    <!--fade-in page, inline script needed to avoid flickering.  adds opacity: 0 class to body, which is removed by first line of JS in scripts.js-->
+    <script>document.body.className += ' fade-out';</script>
+    <!-- my navbar -->
+    <div class="my-nav">
+      <!--top bar-->
+      <div class="nav-top-bar">
+        <a href="index.html#top" id="nav-logo">
+          <img src="images/small-box-logo.png" alt="BH logo">
+        </a>
+        <i class="fa fa-bars fa-2x hamburger" aria-hidden="true"></i>
+        <!-- un-collapsed navbar links -->
+        <ul class="navbar-links">
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <!-- dropdown -->
+      <ul class="dropdown-links">
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#work">Work</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!--case study (initially hidden off screen) -->
+    <div class="case-studies">
+      <!-- back -->
+      <a href="index.html#work">
+        <p class="back-chevron">back</i>
+      </a>
+      <!--case study-->
+      <div class="case-study" id="case-study-1">
+        <div class="case-study-left">
+          <div class="case-study-heading" >
+            <a href="ebird.html">
+              <i class="fa fa-chevron-left fa-2x back-chevron"></i>
+            </a>
+            <h3>Graphic Design</h3>
+            <a href="npo.html">
+              <i class="fa fa-chevron-right fa-2x back-chevron"></i>
+            </a>
+          </div>
+          <div class="case-study-text">
+            <div class="case-study-bullets">
+              <div class="case-study-bullets-left">
+                <p>Adobe Photoshop, Illustrator</p>
+                <p>Design Concepts and Execution</p>
+              </div>
+              <div class="case-study-bullets-right">
+                <p>Communication with stakeholders</p>
+                <p>Delivery on deadline</p>
+                </p>
+              </div>
+            </div>
+            <div class="case-study-paragraph">
+              <p>I created album artwork, show posters, and a t shirt design for my own hip hop group, <a href="https://properknocks.bandcamp.com/album/the-early-bird-project" target="_blank">The Early Bird Project</a>, to be released on local indie rap label <a href="https://properknocks.bandcamp.com/">Proper Knocks</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="case-study-right">
+          <!--content wrapper-->
+          <div class="case-study-content-wrapper">
+            <div class="scroll-downs">
+              <div class="mousey">
+                <div class="scroller"></div>
+              </div>
+            </div>
+            <!--content mobile -->
+            <div class="case-study-content display-on-mobile">
+              <div class="screenshots">
+                <img src="images/graphic-design/early-bird-cover.jpg" alt="early bird project album cover" class="screenshot">
+
+                <img src="images/graphic-design/early-bird-tee.jpg" alt="early bird project t-shirt" class="screenshot">
+
+                <img src="images/graphic-design/early-bird.jpg" alt="early bird project show poster" class="screenshot">
+
+                <img src="images/graphic-design/sandwiched-poster.jpg" alt="proper knocks tour poster" class="screenshot">
+              </div>
+              <div class="to-top-desktop">
+                <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+                <p>top</p>
+              </div>
+            </div>
+            <!--content tablet and up -->
+            <div class="case-study-content display-on-tablet" >
+              <img src="images/graphic-design/early-bird-cover.jpg" alt="early bird project album cover" class="screenshot">
+
+              <img src="images/graphic-design/early-bird-tee.jpg" alt="early bird project t-shirt" class="screenshot">
+
+              <img src="images/graphic-design/early-bird.jpg" alt="early bird project show poster" class="screenshot">
+
+              <img src="images/graphic-design/sandwiched-poster.jpg" alt="proper knocks tour poster" class="screenshot">
+
+              <div class="to-top-desktop">
+                <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+                <p>top</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="to-top-tablet-and-down">
+          <i class="fa fa-chevron-up fa-2x" aria-hidden="true"></i>
+          <p>top</p>
+        </div>
+        <!--case-study-right-->
+      </div>
+      <!--case study-->
+    </div>
+
+    <!-- footer-->
+    <footer class="light-bg">
+      <a href="https://github.com/gepetto503" target="_blank">
+      <i class="fa fa-github fa-2x"></i></a>
+      <a href="https://twitter.com/brendanhannadev?lang=en" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+    </footer>
+    <!--materialize js cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--animate on scroll library js -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  </body>
+</html>
