@@ -1,132 +1,89 @@
 //take off section padding so carousel extends full-width of page, but put it back on the horizontal line for consistency with other sections
 #work {
   padding: 0;
-  .horizontal-line {
-    margin: 20px 30px;
+
+}
+
+.work-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include tablet {
+
+  };
+}
+
+.work-thumbnail {
+  background: center center;
+  background-size: cover;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10px;
+  @include lg-phone {
+    // margin: 0;
+    // width: 48vw;
+    // height: 48vw;
+  }
+  @include desktop {
+    // margin: 0;
+    // height: 25vw;
+    // width: 24.5vw;
+  }
+  .work-thumb-overlay {
+    transition: linear .25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.1;
+    z-index: 100;
+  }
+  &:hover > .work-thumb-overlay {
+    opacity: 0.8;
+    display: block;
+    cursor: pointer;
   }
 }
 
-#mobile-gallery {
-  @include hover {
-    display: none;
-  };
+.work-thumb-info {
+  display: none;
+}
+.work-thumbnail:hover > .work-thumb-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 200;
+  padding: 10px;
+  & h5, p {
+    margin: .2em;
+  }
 }
 
-//show non-touch screen friendly carousel on non-touch screen devices
-#no-touch-carousel {
-  display: none;
-  @include hover {
-    display: block;
-  };
-}
 
 //bg images for each individual carousel slide
-#style360 {
-  background-image: url('../images/style360.png');
+#portfolio {
+  background-image: url('../images/portfolio/portfolio-code.png');
+  background-position: 25%;
 }
-
-#pokemon {
-  background-image: url('../images/pokemon.png');
-}
-
-#ebird
- {
-  background-image: url('../images/ebird.jpg');
-}
-
-#sandwich {
-  background-image: url('../images/sandwich.png');
-}
-
 #npo {
   background-image: url('../images/npo-donator.png');
 }
-
-.thumbnail {
-  height: 30vh;
-  background-size: cover;
-  background-position: center center;
+#style360 {
+  background-image: url('../images/style360.png');
 }
-
-
-.carousel-item {
-  //overlay clear until hover
-  .overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0);
-    transition: .2s linear;
-  }
-  .clear-overlay {
-    position: absolute;
-    left: 8%;
-    height: 100%;
-    width: 85%;
-    z-index: 2;
-  }
-
-  //wraps carousel previous/next chevrons and 'view' button
-  .slide-wrapper {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    position: relative;
-    .fa-chevron-left, .fa-chevron-right {
-      opacity: 0;
-      transition: .2s;
-      z-index: 2;
-      @include hover {
-        opacity: 0.5;
-        &:hover {
-          opacity: 1;
-          cursor: pointer;
-        }
-      };
-    }
-    //'view' button invisible until hovered
-    .view-proj-btn {
-      display: none;
-    }
-  }
-
-  //when you hover on a carousel slide...
-  @include hover {
-    &:hover {
-      //make the overlay not-clear
-      .overlay {
-        background-color: rgba(0,0,0,.5);
-      }
-      //make the button display
-      .view-proj-btn {
-        display: flex;
-      }
-    }
-  };
-}
-
-
-.case-studies {
-  min-height: 60vh;
-  width: 100vw;
-  .back-chevron, .back {
-    color: black;
-    cursor: pointer;
-    transition: .2s ease-in;
-    @include hover {
-      opacity: 0.5;
-      &:hover {
-        opacity: 1;
-      }
-    };
-  }
-}
-
-//bg properties that apply to all carousel images
-.carousel-item {
-  background: center center no-repeat;
-  background-size: cover;
+#proper-knocks
+ {
+  background-image: url('../images/ebird.jpg');
 }

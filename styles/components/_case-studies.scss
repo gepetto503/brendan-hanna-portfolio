@@ -1,4 +1,20 @@
+
+
+
 .case-studies {
+  min-height: 60vh;
+  width: 100vw;
+  .back-chevron, .back {
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in;
+    @include hover {
+      opacity: 0.5;
+      &:hover {
+        opacity: 1;
+      }
+    };
+  }
   a {
     text-decoration: underline;
     color: black;

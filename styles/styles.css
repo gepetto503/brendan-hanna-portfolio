@@ -497,31 +497,43 @@ p, ul > li {
     .about-content .about-text {
       max-width: 50%; } }
 
-.case-studies a {
-  text-decoration: underline;
-  color: black; }
-  @media (hover: hover) {
-    .case-studies a {
-      text-decoration: none;
-      opacity: 0.5;
-      transition: opacity .25s; }
-      .case-studies a:hover {
-        opacity: 1; } }
-.case-studies .back-chevron {
-  margin: 0 0 0 20px;
-  text-transform: uppercase; }
-.case-studies .case-study {
-  display: flex;
-  flex-direction: column; }
-  @media (min-width: 1024px) {
-    .case-studies .case-study {
-      flex-direction: row; } }
-  @media (min-width: 1024px) {
-    .case-studies .case-study .case-study-left, .case-studies .case-study .case-study-right {
-      width: 48%; } }
-  .case-studies .case-study .case-study-left {
-    padding: 40px;
-    padding-top: 0; }
+.case-studies {
+  min-height: 60vh;
+  width: 100vw; }
+  .case-studies .back-chevron, .case-studies .back {
+    color: black;
+    cursor: pointer;
+    transition: .2s ease-in; }
+    @media (hover: hover) {
+      .case-studies .back-chevron, .case-studies .back {
+        opacity: 0.5; }
+        .case-studies .back-chevron:hover, .case-studies .back:hover {
+          opacity: 1; } }
+  .case-studies a {
+    text-decoration: underline;
+    color: black; }
+    @media (hover: hover) {
+      .case-studies a {
+        text-decoration: none;
+        opacity: 0.5;
+        transition: opacity .25s; }
+        .case-studies a:hover {
+          opacity: 1; } }
+  .case-studies .back-chevron {
+    margin: 0 0 0 20px;
+    text-transform: uppercase; }
+  .case-studies .case-study {
+    display: flex;
+    flex-direction: column; }
+    @media (min-width: 1024px) {
+      .case-studies .case-study {
+        flex-direction: row; } }
+    @media (min-width: 1024px) {
+      .case-studies .case-study .case-study-left, .case-studies .case-study .case-study-right {
+        width: 48%; } }
+    .case-studies .case-study .case-study-left {
+      padding: 40px;
+      padding-top: 0; }
 
 .case-study-heading {
   display: flex;
@@ -673,15 +685,15 @@ header {
         margin-top: -30px; } }
 
 .lead {
-  text-align: left;
+  text-align: center;
   margin: auto; }
   @media (min-width: 600px) {
     .lead {
-      text-align: left;
       max-width: 77%; } }
   @media (min-width: 1024px) {
     .lead {
-      font-size: 1.4em; } }
+      font-size: 1.4em;
+      max-width: 80%; } }
 
 /* label color */
 .input-field label {
@@ -818,92 +830,66 @@ header {
 
 #work {
   padding: 0; }
-  #work .horizontal-line {
-    margin: 20px 30px; }
 
-@media (hover: hover) {
-  #mobile-gallery {
-    display: none; } }
+.work-gallery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap; }
 
-#no-touch-carousel {
+.work-thumbnail {
+  background: center center;
+  background-size: cover;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 10px; }
+  .work-thumbnail .work-thumb-overlay {
+    transition: linear .25s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.1;
+    z-index: 100; }
+  .work-thumbnail:hover > .work-thumb-overlay {
+    opacity: 0.8;
+    display: block;
+    cursor: pointer; }
+
+.work-thumb-info {
   display: none; }
-  @media (hover: hover) {
-    #no-touch-carousel {
-      display: block; } }
 
-#style360 {
-  background-image: url("../images/style360.png"); }
+.work-thumbnail:hover > .work-thumb-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 200;
+  padding: 10px; }
+  .work-thumbnail:hover > .work-thumb-info h5, .work-thumbnail:hover > .work-thumb-info p {
+    margin: .2em; }
 
-#pokemon {
-  background-image: url("../images/pokemon.png"); }
-
-#ebird {
-  background-image: url("../images/ebird.jpg"); }
-
-#sandwich {
-  background-image: url("../images/sandwich.png"); }
+#portfolio {
+  background-image: url("../images/portfolio/portfolio-code.png");
+  background-position: 25%; }
 
 #npo {
   background-image: url("../images/npo-donator.png"); }
 
-.thumbnail {
-  height: 30vh;
-  background-size: cover;
-  background-position: center center; }
+#style360 {
+  background-image: url("../images/style360.png"); }
 
-.carousel-item .overlay {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0);
-  transition: .2s linear; }
-.carousel-item .clear-overlay {
-  position: absolute;
-  left: 8%;
-  height: 100%;
-  width: 85%;
-  z-index: 2; }
-.carousel-item .slide-wrapper {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  position: relative; }
-  .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-    opacity: 0;
-    transition: .2s;
-    z-index: 2; }
-    @media (hover: hover) {
-      .carousel-item .slide-wrapper .fa-chevron-left, .carousel-item .slide-wrapper .fa-chevron-right {
-        opacity: 0.5; }
-        .carousel-item .slide-wrapper .fa-chevron-left:hover, .carousel-item .slide-wrapper .fa-chevron-right:hover {
-          opacity: 1;
-          cursor: pointer; } }
-  .carousel-item .slide-wrapper .view-proj-btn {
-    display: none; }
-@media (hover: hover) {
-  .carousel-item:hover .overlay {
-    background-color: rgba(0, 0, 0, 0.5); }
-  .carousel-item:hover .view-proj-btn {
-    display: flex; } }
-
-.case-studies {
-  min-height: 60vh;
-  width: 100vw; }
-  .case-studies .back-chevron, .case-studies .back {
-    color: black;
-    cursor: pointer;
-    transition: .2s ease-in; }
-    @media (hover: hover) {
-      .case-studies .back-chevron, .case-studies .back {
-        opacity: 0.5; }
-        .case-studies .back-chevron:hover, .case-studies .back:hover {
-          opacity: 1; } }
-
-.carousel-item {
-  background: center center no-repeat;
-  background-size: cover; }
+#proper-knocks {
+  background-image: url("../images/ebird.jpg"); }
 
 /*# sourceMappingURL=styles.css.map */

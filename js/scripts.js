@@ -37,19 +37,6 @@ $( document ).ready(function() {
     $('.dropdown-links').hide();
   });
 
-  //carousel stuff
-
-  //initialize materialize carousel
- $('.carousel.carousel-slider').carousel({fullWidth: true});
-
- //make my previous and next chevrons on carousel Work
- $('.carousel-prev').click(function(event){
-   $('.carousel').carousel('prev');
- });
- $('.carousel-next').click(function(event){
-   $('.carousel').carousel('next');
- });
-
  //case study stuff
 
  //'top' arrow at bottom of case studies on desktop

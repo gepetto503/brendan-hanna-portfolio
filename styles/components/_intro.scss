@@ -1,11 +1,13 @@
 .lead {
-  text-align: left;
+  text-align: center;
   margin: auto;
   @include lg-phone {
-    text-align: left;
+    // text-align: left;
     max-width: 77%;
   };
   @include desktop {
     font-size: 1.4em;
+    max-width: 80%;
+
   };
 }
