@@ -854,30 +854,32 @@ header {
     background-color: #000;
     opacity: 0.1;
     z-index: 100; }
-  .work-thumbnail:hover > .work-thumb-overlay {
-    opacity: 0.8;
-    display: block;
-    cursor: pointer; }
+  @media (hover: hover) {
+    .work-thumbnail:hover > .work-thumb-overlay {
+      opacity: 0.8;
+      display: block;
+      cursor: pointer; } }
 
 .work-thumb-info {
   display: none; }
 
-.work-thumbnail:hover > .work-thumb-info {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 200;
-  padding: 10px; }
-  .work-thumbnail:hover > .work-thumb-info h5, .work-thumbnail:hover > .work-thumb-info p {
-    margin: .2em; }
+@media (hover: hover) {
+  .work-thumbnail:hover > .work-thumb-info {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 200;
+    padding: 10px; }
+    .work-thumbnail:hover > .work-thumb-info h5, .work-thumbnail:hover > .work-thumb-info p {
+      margin: .2em; } }
 
 #portfolio {
   background-image: url("../images/portfolio/portfolio-code.png");
