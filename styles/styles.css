@@ -831,6 +831,19 @@ header {
 #work {
   padding: 0; }
 
+#portfolio {
+  background-image: url("../images/portfolio/portfolio-code.png");
+  background-position: 25%; }
+
+#npo {
+  background-image: url("../images/npo/npo-donator.png"); }
+
+#style360 {
+  background-image: url("../images/style360.png"); }
+
+#proper-knocks {
+  background-image: url("../images/ebird.jpg"); }
+
 .work-gallery {
   display: flex;
   flex-direction: row;
@@ -880,18 +893,5 @@ header {
     padding: 10px; }
     .work-thumbnail:hover > .work-thumb-info h5, .work-thumbnail:hover > .work-thumb-info p {
       margin: .2em; } }
-
-#portfolio {
-  background-image: url("../images/portfolio/portfolio-code.png");
-  background-position: 25%; }
-
-#npo {
-  background-image: url("../images/npo-donator.png"); }
-
-#style360 {
-  background-image: url("../images/style360.png"); }
-
-#proper-knocks {
-  background-image: url("../images/ebird.jpg"); }
 
 /*# sourceMappingURL=styles.css.map */

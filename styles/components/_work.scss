@@ -1,8 +1,24 @@
 //take off section padding so carousel extends full-width of page, but put it back on the horizontal line for consistency with other sections
 #work {
   padding: 0;
-
 }
+
+//bg images for each individual carousel slide
+#portfolio {
+  background-image: url('../images/portfolio/portfolio-code.png');
+  background-position: 25%;
+}
+#npo {
+  background-image: url('../images/npo/npo-donator.png');
+}
+#style360 {
+  background-image: url('../images/style360.png');
+}
+#proper-knocks
+ {
+  background-image: url('../images/ebird.jpg');
+}
+
 
 .work-gallery {
   display: flex;
@@ -45,7 +61,7 @@
   display: none;
 }
 .work-thumbnail:hover > .work-thumb-info {
-  @include hover {    
+  @include hover {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -63,21 +79,4 @@
       margin: .2em;
     }
   };
-}
-
-
-//bg images for each individual carousel slide
-#portfolio {
-  background-image: url('../images/portfolio/portfolio-code.png');
-  background-position: 25%;
-}
-#npo {
-  background-image: url('../images/npo-donator.png');
-}
-#style360 {
-  background-image: url('../images/style360.png');
-}
-#proper-knocks
- {
-  background-image: url('../images/ebird.jpg');
 }
