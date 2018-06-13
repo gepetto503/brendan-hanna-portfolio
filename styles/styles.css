@@ -404,6 +404,9 @@ body {
   overflow-x: hidden;
   opacity: 1;
   transition: 1s opacity; }
+  @media (min-width: 2000px) {
+    body {
+      font-size: 24px; } }
 
 body.fade-out {
   opacity: 0;
@@ -450,6 +453,12 @@ section {
 @media (min-width: 1024px) {
   .restrain-width {
     max-width: 1024px; } }
+@media (min-width: 1440px) {
+  .restrain-width {
+    max-width: 1440px; } }
+@media (min-width: 2000px) {
+  .restrain-width {
+    max-width: 2000px; } }
 
 h1 {
   font-weight: 700;
@@ -480,22 +489,15 @@ p, ul > li {
     p, ul > li {
       font-size: 1.2em; } }
 
-@media (min-width: 600px) {
-  .about-content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start; } }
-.about-content img {
-  display: block;
-  margin: 30px auto; }
-  @media (min-width: 1024px) {
-    .about-content img {
-      margin: 30px; } }
-.about-content .about-text {
-  padding: 20px; }
-  @media (min-width: 1024px) {
-    .about-content .about-text {
-      max-width: 50%; } }
+.about-content {
+  overflow: auto; }
+  .about-content img {
+    display: block;
+    margin: auto; }
+    @media (min-width: 600px) {
+      .about-content img {
+        float: left;
+        padding-right: 20px; } }
 
 .case-studies {
   min-height: 60vh;
@@ -574,7 +576,7 @@ p, ul > li {
   position: relative; }
   .case-study-content-wrapper .case-study-content {
     width: 100%;
-    padding: 20px; }
+    padding: 10%; }
     @media (min-width: 1024px) {
       .case-study-content-wrapper .case-study-content {
         margin-left: 18px;
@@ -614,6 +616,12 @@ p, ul > li {
 #contact form, #contact .contact-text {
   max-width: 768px;
   margin: auto; }
+  @media (min-width: 1024px) {
+    #contact form, #contact .contact-text {
+      max-width: 1024px; } }
+  @media (min-width: 2000px) {
+    #contact form, #contact .contact-text {
+      max-width: 2000px; } }
 #contact .button {
   display: block;
   margin: auto;
@@ -835,28 +843,40 @@ header {
   background-image: url("../images/portfolio/portfolio-code.png");
   background-position: 25%; }
 
+#tangerine {
+  background-image: url("../images/tangerine/desktop.png");
+  background-position: 25%; }
+
 #npo {
   background-image: url("../images/npo/npo-donator.png"); }
 
 #style360 {
-  background-image: url("../images/style360.png"); }
+  background-image: url("../images/style-360/style360.png"); }
 
 #proper-knocks {
-  background-image: url("../images/ebird.jpg"); }
+  background-image: url("../images/proper-knocks/ebird.jpg"); }
 
 .work-gallery {
+  margin: 30px auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap; }
+  flex-direction: column; }
+  @media (min-width: 600px) {
+    .work-gallery {
+      flex-direction: row;
+      flex-wrap: wrap; } }
 
 .work-thumbnail {
   background: center center;
   background-size: cover;
   position: relative;
-  width: 300px;
   height: 300px;
-  margin: 10px; }
+  flex-grow: 1; }
+  @media (min-width: 600px) {
+    .work-thumbnail {
+      width: 40%; } }
+  @media (min-width: 1024px) {
+    .work-thumbnail {
+      width: 30%; } }
   .work-thumbnail .work-thumb-overlay {
     transition: linear .25s;
     position: absolute;

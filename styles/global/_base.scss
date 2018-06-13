@@ -15,6 +15,9 @@ html {
 
 body {
   font-size: 16px;
+  @include xl-desktop {
+    font-size: 24px;
+  };
   //stops animation library from causing horizontal scrolling
   overflow-x: hidden;
   //for fade-in/fade-out on load

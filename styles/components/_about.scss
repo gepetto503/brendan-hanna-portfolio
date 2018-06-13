@@ -1,20 +1,39 @@
 .about-content {
-  @include lg-phone {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-  }
+  overflow: auto;
   img {
     display: block;
-    margin: 30px auto;
-    @include desktop {
-      margin: 30px;
-    };
-  }
-  .about-text {
-    padding: 20px;
-    @include desktop {
-      max-width: 50%;
+    margin: auto;
+    @include lg-phone {
+      float: left;
+      padding-right: 20px;
     }
   }
-}
+  // .about-text {
+  //   margin: auto;
+  //   max-width: 90%;
+  //   @include tablet {
+  //     max-width: 75%;
+  //   };
+  // }
+};
+
+// .about-content {
+//   @include lg-phone {
+//     display: flex;
+//     justify-content: center;
+//     align-items: flex-start;
+//   }
+//   img {
+//     display: block;
+//     margin: 30px auto;
+//     @include desktop {
+//       margin: 30px;
+//     };
+//   }
+//   .about-text {
+//     padding: 20px;
+//     @include desktop {
+//       max-width: 50%;
+//     }
+//   }
+// }

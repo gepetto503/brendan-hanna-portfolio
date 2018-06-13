@@ -1,6 +1,12 @@
 #contact {
   form, .contact-text {
     max-width: $tablet-width;
+    @include desktop {
+      max-width: $desktop-width;
+    };
+    @include xl-desktop {
+      max-width: $xl-desktop-width;
+    };
     margin: auto;
   }
   // .contact-text {

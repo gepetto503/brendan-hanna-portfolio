@@ -8,25 +8,31 @@
   background-image: url('../images/portfolio/portfolio-code.png');
   background-position: 25%;
 }
+
+#tangerine {
+  background-image: url('../images/tangerine/desktop.png');
+  background-position: 25%;
+}
+
 #npo {
   background-image: url('../images/npo/npo-donator.png');
 }
 #style360 {
-  background-image: url('../images/style360.png');
+  background-image: url('../images/style-360/style360.png');
 }
 #proper-knocks
  {
-  background-image: url('../images/ebird.jpg');
+  background-image: url('../images/proper-knocks/ebird.jpg');
 }
 
 
 .work-gallery {
+  margin: 30px auto;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  @include tablet {
-
+  flex-direction: column;
+  @include lg-phone {
+    flex-direction: row;
+    flex-wrap: wrap;
   };
 }
 
@@ -34,9 +40,15 @@
   background: center center;
   background-size: cover;
   position: relative;
-  width: 300px;
   height: 300px;
-  margin: 10px;
+  flex-grow: 1;
+  @include lg-phone {
+    width: 40%;
+  };
+  @include desktop {
+    width: 30%;
+  };
+  @include lg-desktop;
   .work-thumb-overlay {
     transition: linear .25s;
     position: absolute;

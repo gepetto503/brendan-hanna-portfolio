@@ -27,4 +27,10 @@
   @include desktop {
     max-width: $desktop-width;
   };
+  @include lg-desktop {
+    max-width: $lg-desktop-width;
+  };
+  @include xl-desktop {
+    max-width: $xl-desktop-width;
+  };
 }
