@@ -39,6 +39,16 @@ section {
   @include desktop {
     padding: 50px 30px;
   };
+  @include lg-desktop {
+    max-width: 75%;
+    margin: auto;
+  };
+  // @include xl-desktop {
+  //   // max-width: 60%;
+  // };
+  @include xxl-screen {
+    max-width: 60%;
+  };
 }
 
 //some sections have light backgrounds

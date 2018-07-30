@@ -418,6 +418,13 @@ section {
   @media (min-width: 1024px) {
     section {
       padding: 50px 30px; } }
+  @media (min-width: 1440px) {
+    section {
+      max-width: 75%;
+      margin: auto; } }
+  @media (min-width: 2500px) {
+    section {
+      max-width: 60%; } }
 
 .light-bg {
   background-color: #E1E1E1; }
@@ -839,6 +846,10 @@ header {
 #work {
   padding: 0; }
 
+#showfinder {
+  background-image: url("../images/showfinder/title.png");
+  background-position: 25%; }
+
 #portfolio {
   background-image: url("../images/portfolio/portfolio-code.png");
   background-position: 25%; }
@@ -855,6 +866,9 @@ header {
 
 #proper-knocks {
   background-image: url("../images/proper-knocks/ebird.jpg"); }
+
+#daily-ui {
+  background-image: url("../images/daily-ui/brand.png"); }
 
 .work-gallery {
   margin: 30px auto;

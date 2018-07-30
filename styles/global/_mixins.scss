@@ -3,6 +3,7 @@ $tablet-width: 768px;
 $desktop-width: 1024px;
 $lg-desktop-width: 1440px;
 $xl-desktop-width: 2000px;
+$xxl-screen-width: 2500px;
 //if device screen is this big, do stuff
 @mixin lg-phone {
   @media (min-width: #{$lg-phone-width}) {
@@ -30,6 +31,12 @@ $xl-desktop-width: 2000px;
 
 @mixin xl-desktop {
   @media (min-width: #{$xl-desktop-width}) {
+    @content;
+  }
+}
+
+@mixin xxl-screen {
+  @media (min-width: #{$xxl-screen-width}) {
     @content;
   }
 }
