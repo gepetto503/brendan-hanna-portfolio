@@ -1,11 +1,14 @@
 .lead {
   text-align: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
   margin: auto;
-  @include lg-phone {
-    // text-align: left;
-    max-width: 77%;
-  };
-  @include desktop {
-    max-width: 80%;
+  // border: 2px solid red;
+  font-size: 1.25em;
+  line-height: 1.1111111em;
+  @include tablet {
+    line-height: 1.222222em;
   };
 }

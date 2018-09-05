@@ -1,22 +1,24 @@
 .about-content {
-  overflow: auto;
+  // border: 1px solid red;
+  // overflow: auto;
+  padding: 1em;
+
   img {
-    display: block;
-    margin: auto;
+    // display: block;
+    // margin: auto;
     @include lg-phone {
       float: left;
       padding-right: 20px;
     }
   }
-  // .about-text {
-  //   margin: auto;
-  //   max-width: 90%;
-  //   @include tablet {
-  //     max-width: 75%;
-  //   };
-  // }
 };
 
+.about-text {
+  & p:first-child{
+    margin-top: 0em;
+
+  }
+}
 // .about-content {
 //   @include lg-phone {
 //     display: flex;
