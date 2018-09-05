@@ -13,11 +13,8 @@ html {
   }
 //
 
+
 body {
-  font-size: 16px;
-  @include xl-desktop {
-    font-size: 24px;
-  };
   //stops animation library from causing horizontal scrolling
   overflow-x: hidden;
   //for fade-in/fade-out on load
@@ -29,39 +26,4 @@ body {
 body.fade-out {
     opacity: 0;
     transition: none;
-}
-
-
-//basic section styles
-section {
-  padding: 30px;
-  min-width: 200px;
-  @include desktop {
-    padding: 50px 30px;
-  };
-  @include lg-desktop {
-    max-width: 75%;
-    margin: auto;
-  };
-  // @include xl-desktop {
-  //   // max-width: 60%;
-  // };
-  @include xxl-screen {
-    max-width: 60%;
-  };
-}
-
-//some sections have light backgrounds
-.light-bg {
-  background-color: $light-bg;
-}
-
-.horizontal-line {
-  border-top: 2px solid $light-grey;
-  margin: 20px auto;
-}
-
-.horizontal-line-dark {
-  border-top: 1px solid $light-grey;
-  margin: 20px auto;
 }

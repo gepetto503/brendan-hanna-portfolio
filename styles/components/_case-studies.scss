@@ -1,20 +1,43 @@
 
+.chevron, .back {
+  color: black;
+  cursor: pointer;
+  transition: .2s ease-in;
+  @include hover {
+    opacity: 0.5;
+    &:hover {
+      opacity: 1;
+    }
+  };
+}
 
+.chevron {
+  margin: 0 0 0 20px;
+  text-transform: uppercase;
+}
 
-.case-studies {
+.case-study {
   min-height: 60vh;
-  width: 100vw;
-  .back-chevron, .back {
-    color: black;
-    cursor: pointer;
-    transition: .2s ease-in;
-    @include hover {
-      opacity: 0.5;
-      &:hover {
-        opacity: 1;
-      }
+  // width: 100vw;
+  // border: 3px dashed blue;
+  // padding: 1em;
+}
+
+.cs-flex-wrapper {
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  };
+  .case-study-left, .case-study-right {
+    @include desktop {
+      width: 48%;
     };
   }
+  .case-study-left {
+    // padding: 40px;
+    padding-top: 0;
+  };
   a {
     text-decoration: underline;
     color: black;
@@ -27,108 +50,186 @@
       }
     };
   }
-
-  .back-chevron {
-    margin: 0 0 0 20px;
-    text-transform: uppercase;
-  }
-  .case-study {
-    display: flex;
-    flex-direction: column;
-    @include desktop {
-      flex-direction: row;
-    };
-    .case-study-left, .case-study-right {
-      @include desktop {
-        width: 48%;
-      };
-    }
-    .case-study-left {
-      padding: 40px;
-      padding-top: 0;
-    };
-  }
 }
 
-//case study left
 .case-study-heading {
+  // border: 3px solid pink;
+}
+
+//lockup of prev and next chevrons and title
+.case-study-title {
+  // border: 2px solid red;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  h3 {
-    font-family: 'roboto condensed', sans-serif;
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-    font-size: 2em;
-    @include lg-phone {
-      font-size: 3em;
-    };
-  }
+  // h3 {
+  //   font-family: 'roboto condensed', sans-serif;
+  //   text-transform: uppercase;
+  //   font-weight: 700;
+  //   text-align: center;
+  //   font-size: 2em;
+  //   @include lg-phone {
+  //     font-size: 3em;
+  //   };
+  // }
   .fa-chevron-left, .fa-chevron-right {
     font-size: 1.5em;
+    margin: auto 1em;
+
+
     @include lg-phone {
       font-size: 2em;
     };
   }
-  .fa-chevron-left {
-    margin-left: 0;
-    margin-right: 20px;
+}
+
+
+.case-study-bullets {
+  // border: 2px solid grey;
+  display: flex;
+  justify-content: center;
+  margin-top: -1.75em;
+
+  .case-study-bullets-left, .case-study-bullets-right {
+    // width: 50%;
+    // border: 3px dashed grey;
+  }
+  .case-study-bullets-left {
+    margin-right: 30px;
   }
 }
 
-.case-study-text {
-  margin: 0 auto;
-  @include desktop {
-    // padding: 0px 60px 60px 60px;
-  };
-  .case-study-bullets {
-    @include tablet {
-      display: flex;
-      justify-content: space-between;
-      .case-study-bullets-left, .case-study-bullets-right {
-        width: 50%;
-      }
-      .case-study-bullets-left {
-        margin-right: 30px;
-      }
-    };
-  }
-  .case-study-paragraph {
-    // padding:
-  }
-}
-
-//case-study right
-.case-study-content-wrapper {
-  overflow: hidden;
-  width: 100%;
+.resp-iframe-wrapper {
+  // border: 3px solid red;
   position: relative;
-
-  .case-study-content {
+  overflow: hidden;
+  padding-top: 50%;
+  .resp-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    padding: 10%;
+    height: 100%;
+    // border: 3px solid lightgreen;
+  }
+}
 
-    @include desktop {
-      margin-left: 18px;
-      height: 80vh;
-      position: relative;
-      overflow-y: scroll;
-    };
-    .screenshot {
-      width: 100%;
-      // height: 70vh;
-      display: block;
-      margin: 20px 0;
-      // background-position: center center;
-      // background-size: cover;
-      // @include desktop {
-      //   height: 30vh;
-      // };
+.case-study-full-width-image {
+  width: 100%;
+  background: #000d1b;
+  margin: auto;
+  padding: 2em;
+  // border: 3px solid red;
+
+  img {
+    width: 100%;
+    max-width: 35em;
+    display: block;
+    margin: auto;
+  }
+};
+
+.case-study-full-width-image h3, .case-study-paragraph h3 {
+  text-align: center;
+  text-transform: none;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.1111111em;
+  @include tablet {
+    line-height: 1.222222em;
+  };
+}
+.case-study-full-width-image h3 {
+  color: white;
+}
+// .section-padding {
+//   padding: 1em 0px;
+// }
+
+.process {
+  min-height: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  ul {
+    // border: 2px solid pink;
+    display: inline-block;
+    text-align: center;
+  }
+  h2, ul {
+    margin: .25em;
+  }
+
+  ul > li {
+  display: inline;
+    &:not(:last-child):after {
+      content: "|";
+      margin: .25em;
     }
   }
 }
 
+.case-study-paragraph {
+  // border: 2px solid pink;
+  padding: 1.25em;
+  @include tablet {
+    max-width: 35em;
+    margin: auto;
+  };
+  h2 {
+    font-size: 1.563em;
+    line-height: 1.13636364em;
+    @include tablet {
+      line-height: 1.25em;
+    };
+    @include desktop {
+      line-height: 1.05em;
+    };
+  }
+}
+
+
+
+.constrained-image {
+  width: 100%;
+}
+
+//case study content wrapper exists only as a wrapper to hide the default browser scroll bar on the scrolling screenshots
+.case-study-scrollbar-hider {
+  // margin: 0 auto;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+//the screenshots that appear on the right side on desktop view
+//should be called right-flex-child or something
+.case-study-scrolling-screenshots {
+  // border: 2px solid blue;
+  width: 100%;
+  padding: 1.25em;
+  //this hides the scroll bar
+  @include desktop {
+    margin-left: 18px;
+    height: 80vh;
+    position: relative;
+    overflow-y: scroll;
+  };
+}
+
+.screenshot {
+  width: 100%;
+  // height: 70vh;
+  display: block;
+  margin: 20px 0;
+  // background-position: center center;
+  // background-size: cover;
+  // @include desktop {
+  //   height: 30vh;
+  // };
+}
 
 //back-to-top arrows
 .to-top-desktop, .to-top-tablet-and-down {
@@ -137,6 +238,7 @@
   p {
     text-transform: uppercase;
     font-weight: 700;
+    margin: auto;
   }
   @include hover {
     opacity: 0.5;

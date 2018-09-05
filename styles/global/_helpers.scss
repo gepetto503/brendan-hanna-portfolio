@@ -34,3 +34,37 @@
     max-width: $xl-desktop-width;
   };
 }
+
+.text-center {
+  text-align: center;
+}
+
+.padding-40 {
+  padding: 40px;
+}
+
+//typography
+.subtitle {
+  //font-size overwritten here in order to use a p element instead of a header element as required/recommended by the html5 spaec, but have the text big enough in relation to the header
+  font-size: 1.563em;
+}
+
+//apply to a paragraph of body copy to restrict the line length to 45em for readability.  results in about 75 characters per line max
+.line-length {
+  max-width: 40em;
+}
+
+//some sections have light backgrounds
+.light-bg {
+  background-color: $light-bg;
+}
+
+.horizontal-line {
+  border-top: 2px solid $light-grey;
+  margin: 20px auto;
+}
+
+.horizontal-line-dark {
+  border-top: 1px solid $light-grey;
+  margin: 20px auto;
+}

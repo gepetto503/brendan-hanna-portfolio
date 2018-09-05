@@ -4,6 +4,8 @@
   display: flex;
   flex-direction: column;
 
+  background: white;
+
   //positioning
   position: fixed;
   z-index: 1000;
@@ -18,56 +20,62 @@
   //user agent stylesheet default margin breaks design
   ul {
     margin: 0;
-  }
-
-  //this houses the small logo, hamburger and in-line links visible on tablet and above
-  .nav-top-bar {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 20px;
-    height: 60px;
-    background-color: white;
-    transition: .4s linear;
-    .hamburger {
-      cursor: pointer;
-      @include tablet {
-        display: none;
-      };
+    a:hover {
+      //resets materialize css rules on nav links so theres no grey hover state
+      background: none;
     }
   }
-  .dropdown-links {
-    display: none;
-    background-color: white;
-    padding: 20px;
-    padding-top: 25px;
-    text-align: center;
-    text-transform: uppercase;
-    box-shadow: 5px 0px 2px grey;
-    transition: 1s linear;
+}
 
-    li a {
-      color: black;
-      line-height: 2em;
-      font-size: 1.25em;
-      font-weight: 300;
-      font-style: italic;
-      border-bottom: 1px solid $light-grey;
-    }
-  }
-  .navbar-links {
-    display: none;
+//this houses the small logo, hamburger and in-line links visible on tablet and above
+.nav-top-bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  height: 60px;
+  background-color: white;
+  transition: .4s linear;
+  .hamburger {
+    cursor: pointer;
     @include tablet {
-      display: flex;
-      li a {
-        color: black;
-        font-weight: 700;
-        margin-left: 15px;
-        text-transform: uppercase;
-      }
+      display: none;
     };
   }
+}
+
+.dropdown-links {
+  display: none;
+  background-color: white;
+  padding: 20px;
+  padding-top: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 5px 0px 2px grey;
+  transition: 1s linear;
+
+  li a {
+    color: black;
+    line-height: 2em;
+    font-size: 1.25em;
+    font-weight: 300;
+    font-style: italic;
+    border-bottom: 1px solid $light-grey;
+  }
+}
+
+.navbar-links {
+  display: none;
+  @include tablet {
+    display: flex;
+    li a {
+      color: black;
+      font-weight: 700;
+      margin-left: 15px;
+      text-transform: uppercase;
+    }
+  };
 }
 
 // .sticky {

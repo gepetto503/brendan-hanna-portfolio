@@ -1,33 +1,97 @@
 
+//see additional styles such as subtitles in helpers.scss
 
-h1 {
+//this is for fluid typography: the modular type scale still applies, but its all in relation to the size of the body copy, which is 1 em, and thus the same as whatever the html is set to. this sets it at 16px for smallest viewport, and from there it scales it up fluidly based on the viewport width
+body {
+  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  @include tablet {
+    font-size: 18px;
+  };
+  @include desktop {
+    font-size: 19px;
+  };
+  @include lg-desktop {
+    font-size: 24px;
+  };
+  @include xl-desktop{
+    font-size: 30px;
+  } ;
+}
+// @media screen and (min-width: 320px) {
+//   body {
+//     font-size: calc(16px + 6 * ((100vw - 320px) / 680));
+//   }
+// }
+//this commented out part will cap out the font size at 22px, not letting it get any larger.  I got rid of it because why would you want that?  there are bigger screens that need larger type
+// @media screen and (min-width: 1000px) {
+//   html {
+//     font-size: 22px;
+//   }
+// }
+
+
+h1, h2, h3, h4 {
   font-weight: 700;
   font-style: italic;
   text-transform: uppercase;
+}
+
+h2, h3, h4 {
+  font-family: 'Roboto Condensed';
+}
+
+h1 {
+  font-size: 2.441em;
+  line-height: 1.25em;
   @include tablet {
-    font-size: 3.25em;
+    line-height: 1.125em;
   };
   @include desktop {
-    font-size: 3.5em;
-  };
-  @include lg-desktop {
-    font-size: 4em;
+    line-height: 1.05em;
   };
 }
 
+h2 {
+  font-size: 1.953em;
+  line-height: 1.15384615em;
+  @include tablet {
+    line-height: 1.25em;
+  };
+  @include desktop {
+    line-height: 1.05em;
+  };
+}
 
 h3 {
-  text-transform: uppercase;
-  text-align: center;
-  font-family: "roboto condensed", sans-serif;
-  font-style: italic;
-  color: $grey;
-}
-p, ul>li {
-  font-weight: 300;
-  font-size: 1.2em;
-  line-height: 1.5em;
+  font-size: 1.563em;
+  line-height: 1.13636364em;
+  @include tablet {
+    line-height: 1.25em;
+  };
   @include desktop {
-    font-size: 1.2em;
+    line-height: 1.05em;
   };
 }
+
+h4 {
+  font-size: 1.25em;
+
+  line-height: 1.1111111em;
+  @include tablet {
+    line-height: 1.222222em;
+  };
+}
+
+p, ul>li {
+  font-size: 1em;
+  font-weight: 300;
+  line-height: 1.33em;
+  max-width: 40em;
+  @include tablet {
+    line-height: 1.375em;
+  };
+  @include desktop {
+    line-height: 1.5em;
+  };
+};

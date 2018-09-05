@@ -1,0 +1,20 @@
+.landing-page-section {
+  padding: 30px;
+  min-width: 200px;
+  h2 {
+    text-align: center;
+  }
+  @include desktop {
+    padding: 50px 30px;
+  };
+  @include lg-desktop {
+    max-width: 75%;
+    margin: auto;
+  };
+  // @include xl-desktop {
+  //   // max-width: 60%;
+  // };
+  @include xxl-screen {
+    max-width: 60%;
+  };
+}

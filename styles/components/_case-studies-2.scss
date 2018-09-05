@@ -1,0 +1,52 @@
+
+
+//
+// //this has rules on it in some other file, probably case-studies.scss
+// .case-study-2-wrapper {
+//   border: 2px solid blue;
+// }
+// //direct child of case-study-2-wrapper, sibbling to case-study-heading
+// .case-study-2-role {
+//   margin-bottom: 40px;
+//   border: 2px solid aqua;
+//   ul {
+//     display: flex;
+//     flex-direction: row;
+//     width: 80vw;
+//     @include tablet {
+//       width: 60%;
+//     };
+//     margin: auto;
+//     li {
+//       margin: auto;
+//     }
+//   }
+// }
+//
+// .case-study-2-image {
+//   width: 100%;
+// }
+//
+//
+// .case-study-2-content {
+//   border: 3px dashed purple;
+//   display: flex;
+//   flex-direction: column;
+//   //aligns the text divs inside along the center
+//   align-items: center;
+//   // justify-content: center;
+//   max-width: 40em;
+//   margin: auto;
+//   // padding: 40px;
+// }
+//
+// .case-study-2-text {
+//   border: 3px solid green;
+// }
+//
+// .dark-bg {
+//
+//   width: 100%;
+//   min-height: 50vh;
+//   background-color: darkblue;
+// }
