@@ -41,7 +41,7 @@ $( document ).ready(function() {
 
  //'top' arrow at bottom of case studies on desktop
   $('.to-top-desktop').click(function(event){
-   $('.case-study-content').animate({
+   $('.case-study-scrolling-screenshots').animate({
      scrollTop: 0
    }, 1000);
  });
@@ -55,8 +55,8 @@ $( document ).ready(function() {
  });
 
   //mouse scroll icon fade-out when scrolled
-  $('.case-study-content').scroll(function() {
-    if ($('.case-study-content').scrollTop() >= 100) {
+  $('.case-study-scrolling-screenshots').scroll(function() {
+    if ($('.case-study-scrolling-screenshots').scrollTop() >= 100) {
       $('.scroll-downs').animate({opacity: 0});
     }
   });

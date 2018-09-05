@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <!--responsive meta tag-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brendan Hanna</title>
+    <!--materialize css cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!-- animate on scroll -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <!--my compiled scss-->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,700i|Roboto:400,700" rel="stylesheet">
+    <!-- font awesome icons -->
+    <script src="https://use.fontawesome.com/8606092cd1.js"></script>
+    <!--jquery scripts-->
+    <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+    <!--my scripts-->
+    <script type="text/javascript" src="js/scripts.js"></script>
+  </head>
+  <body>
+    <!--fade-in page, inline script needed to avoid flickering.  adds opacity: 0 class to body, which is removed by first line of JS in scripts.js-->
+    <script>document.body.className += ' fade-out';</script>
+    <div class="content">
+      <!-- my navbar -->
+      <div class="my-nav">
+        <!--top bar-->
+        <div class="nav-top-bar">
+          <a href="#top" id="nav-logo">
+            <img src="images/small-box-logo.png" alt="BH logo">
+          </a>
+          <i class="fa fa-bars fa-2x hamburger" aria-hidden="true"></i>
+          <!-- un-collapsed navbar links -->
+          <ul class="navbar-links">
+            <li><a href="index.html#skills">skills</a></li>
+            <li><a href="index.html#work">Work</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!-- dropdown -->
+        <ul class="dropdown-links">
+          <li><a href="index.html#skills">skills</a></li>
+          <li><a href="index.html#work">Work</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="padding-40">
+      <h1>Heading 1</h1>
+      <p>Used for title on hero image</p>
+      <h2>Heading 2</h2>
+      <p>not currently used for anything (dumb!)</p>
+      <h3>Heading 3</h3>
+      <p>currently used for section headings (playing the role of h2), and for the title of case studies</p>
+      <h4>Heading 4</h4>
+      <p>used for skills subheadings (playing the role of h3 in the hierarchy), but is further customized with rules in the skills.scss file </p>
+      <h5>Heading 5</h5>
+      <p>Body Copy</p>
+      <ul>
+        <li>List Item</li>
+        <li>Used In:
+          <ul>
+            <li>skills section (no further customization)</li>
+            <li>navbar drop down items (on mobile/tablet) (further customized in navbar.scss file, line 50 )</li>
+            <li>navbar items (on desktop) (further customized in navbar.scss file, line 63)</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <!-- footer-->
+    <footer class="light-bg">
+      <a href="https://github.com/gepetto503" target="_blank">
+      <i class="fa fa-github fa-2x"></i></a>
+      <a href="https://twitter.com/brendanhannadev?lang=en" target="_blank"><i class="fa fa-twitter fa-2x"></i></a>
+      <a href="https://www.instagram.com/brendandesignsstuff/" target="blank">
+      <i class="fa  fa-2x fa-instagram"></i></a>
+    </footer>
+
+
+    <!--materialize js cdn-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--animate on scroll library js -->
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+  </body>
+</html>
