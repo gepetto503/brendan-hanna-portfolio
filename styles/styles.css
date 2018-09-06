@@ -620,18 +620,6 @@ p, ul > li {
   .case-study-bullets .case-study-bullets-left {
     margin-right: 30px; }
 
-.resp-iframe-wrapper {
-  position: relative;
-  overflow: hidden;
-  padding-top: 50%;
-  margin: auto; }
-  .resp-iframe-wrapper .resp-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-
 .case-study-full-width-image {
   width: 100%;
   background: #000d1b;
