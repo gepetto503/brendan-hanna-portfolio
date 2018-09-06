@@ -894,6 +894,26 @@ footer {
         margin-left: 15px;
         text-transform: uppercase; } }
 
+.resp-iframe-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .resp-iframe-wrapper h2 {
+    text-align: center;
+    text-transform: none;
+    font-size: 1.25em;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.1111111em;
+    color: #C7C7C7; }
+    @media (min-width: 768px) {
+      .resp-iframe-wrapper h2 {
+        line-height: 1.222222em; } }
+  .resp-iframe-wrapper .resp-iframe {
+    transform: scale(0.75);
+    margin-top: -5em; }
+
 @media (min-width: 1024px) {
   .mousey {
     position: absolute;

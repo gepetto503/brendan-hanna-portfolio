@@ -1,15 +1,28 @@
 .resp-iframe-wrapper {
-  position: flex;
+  display: flex;
+  flex-direction: column;
+
   justify-content: center;
   align-items: center;
+  h2 {
+  text-align: center;
+  text-transform: none;
+  font-size: 1.25em;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.1111111em;
+  color: $light-grey;
+  @include tablet {
+    line-height: 1.222222em;
+  };
+}
   // position: relative;
   // overflow: hidden;
   // padding-top: 50%;
   // margin: auto;
   .resp-iframe {
-
-    // border: 5px solid red;
-    // transform: scale(0.5)
+    transform: scale(0.75);
+    margin-top: -5em;
     // position: absolute;
     // top: 0;
     // left: 0;
