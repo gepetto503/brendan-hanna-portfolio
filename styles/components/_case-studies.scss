@@ -159,6 +159,8 @@
 
 .case-study-paragraph {
   // border: 2px solid pink;
+  display: flex;
+  flex-direction: column;
   padding: 1.25em;
   @include tablet {
     max-width: 35em;

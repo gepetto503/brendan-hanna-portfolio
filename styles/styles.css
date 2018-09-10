@@ -663,6 +663,8 @@ p, ul > li {
       margin: .25em; }
 
 .case-study-paragraph {
+  display: flex;
+  flex-direction: column;
   padding: 1.25em; }
   @media (min-width: 768px) {
     .case-study-paragraph {
@@ -736,7 +738,8 @@ p, ul > li {
   @media (min-width: 2000px) {
     #contact form, #contact .contact-text {
       max-width: 2000px; } }
-#contact .button {
+
+.button {
   display: block;
   margin: auto;
   background-color: black;
