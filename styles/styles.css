@@ -605,7 +605,8 @@ p, ul > li {
 .case-study-title {
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  text-align: center; }
   .case-study-title .fa-chevron-left, .case-study-title .fa-chevron-right {
     font-size: 1.5em;
     margin: auto 1em; }
@@ -1018,8 +1019,11 @@ footer {
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 0;
-    z-index: 100; }
+    z-index: 100;
+    opacity: 0.5; }
+    @media (hover: hover) {
+      .work-thumbnail .work-thumb-overlay {
+        opacity: 0; } }
   @media (hover: hover) {
     .work-thumbnail:hover > .work-thumb-overlay {
       opacity: 0.8;
@@ -1031,24 +1035,41 @@ footer {
   flex-basis: 100%; }
 
 .work-thumb-info {
-  display: none; }
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 200;
+  padding: 10px; }
+  .work-thumb-info h5, .work-thumb-info p {
+    margin: .2em; }
+  @media (hover: hover) {
+    .work-thumb-info {
+      display: none; } }
 
-@media (hover: hover) {
-  .work-thumbnail:hover > .work-thumb-info {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 200;
-    padding: 10px; }
-    .work-thumbnail:hover > .work-thumb-info h5, .work-thumbnail:hover > .work-thumb-info p {
-      margin: .2em; } }
+.work-thumbnail:hover > .work-thumb-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 200;
+  padding: 10px; }
+  .work-thumbnail:hover > .work-thumb-info h5, .work-thumbnail:hover > .work-thumb-info p {
+    margin: .2em; }
 
 /*# sourceMappingURL=styles.css.map */

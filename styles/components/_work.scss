@@ -69,8 +69,12 @@
     width: 100%;
     height: 100%;
     background-color: #000;
-    opacity: 0;
     z-index: 100;
+    opacity: 0.5;
+    @include hover {
+      opacity: 0;
+
+    }
   }
   //makes overlay visible on hover
   &:hover > .work-thumb-overlay {
@@ -89,25 +93,63 @@
 }
 
 .work-thumb-info {
-  display: none;
-}
-.work-thumbnail:hover > .work-thumb-info {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 200;
+  padding: 10px;
+  & h5, p {
+    margin: .2em;
+  }
   @include hover {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    z-index: 200;
-    padding: 10px;
-    & h5, p {
-      margin: .2em;
-    }
+    display: none;
   };
 }
+
+
+.work-thumbnail:hover > .work-thumb-info {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 200;
+  padding: 10px;
+  & h5, p {
+    margin: .2em;
+  }
+}
+
+// .work-thumb-info {
+//   position: absolute;
+//   width: 100%;
+//   height: 100%;
+//   top: 0;
+//   left: 0;
+//   color: white;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   z-index: 200;
+//   padding: 10px;
+//   & h5, p {
+//     margin: .2em;
+//   }
+// }
