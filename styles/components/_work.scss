@@ -71,6 +71,7 @@
     background-color: #000;
     z-index: 100;
     opacity: 0.5;
+    display: none;
     @include hover {
       opacity: 0;
 
@@ -86,6 +87,11 @@
   }
 }
 
+// .work-thumb-overlay {
+//   @include hover {
+//     display: none;
+//   };
+// }
 
 .featured-thumbnail{
   height: 25em;
@@ -110,29 +116,47 @@
   & h5, p {
     margin: .2em;
   }
+  //if the device has hover capacity, don't display the text over thumbnail until the parent (.work-thumbnail) is hovered on
   @include hover {
     display: none;
   };
 }
 
+.work-thumb-info-text {
+  display: none;
+  @include hover {
+    display: block;
+  };
+}
 
+//view project button
+.view-project-button {
+  display: none;
+  // border: 2px solid black;
+  background-color: rgb(70, 181, 174);
+  @include hover {
+    display: none;
+  };
+}
+
+//reveal the hidden text upon hover
 .work-thumbnail:hover > .work-thumb-info {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  color: white;
+  // width: 100%;
+  // height: 100%;
+  // top: 0;
+  // left: 0;
+  // color: white;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  z-index: 200;
-  padding: 10px;
-  & h5, p {
-    margin: .2em;
-  }
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  // text-align: center;
+  // z-index: 200;
+  // padding: 10px;
+  // & h5, p {
+  //   margin: .2em;
+  // }
 }
 
 // .work-thumb-info {
